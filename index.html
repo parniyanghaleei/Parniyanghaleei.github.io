@@ -1,456 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parniyan Ghaleei | Electronics Engineer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    <title>Parniyan Ghaleei | Electronics & Embedded Systems Engineer</title>
 
-body {
-  font-family: Arial, sans-serif;
-  background: #0b1020;
-  color: #f5f7ff;
-  line-height: 1.6;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #eaf6ff;
+            line-height: 1.7;
+        }
 
-/* Navigation */
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-nav {
-  padding: 25px 0;
-  border-bottom: 1px solid #26304a;
-}
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+        /* NAVBAR */
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #63d9ff;
-}
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(7, 17, 31, 0.95);
+            border-bottom: 1px solid #16314a;
+            backdrop-filter: blur(10px);
+        }
 
-.nav-links {
-  display: flex;
-  gap: 25px;
-  color: #aeb8ce;
-}
+        .nav-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-.nav-links a:hover {
-  color: #63d9ff;
-}
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #42d9ff;
+        }
 
-/* Hero */
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
 
-.hero {
-  padding: 120px 0;
-}
+        .nav-links a {
+            color: #b9cbd8;
+            transition: 0.3s;
+        }
 
-.small-title {
-  color: #63d9ff;
-  letter-spacing: 3px;
-  font-size: 14px;
-  text-transform: uppercase;
-}
+        .nav-links a:hover {
+            color: #42d9ff;
+        }
 
-h1 {
-  font-size: 65px;
-  margin: 15px 0;
-}
+        /* HERO */
 
-h1 span {
-  color: #63d9ff;
-}
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+        }
 
-.hero p {
-  max-width: 650px;
-  color: #aeb8ce;
-  font-size: 19px;
-}
+        .hero-content {
+            max-width: 800px;
+        }
 
-.buttons {
-  margin-top: 30px;
-}
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 76px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
 
-.button {
-  display: inline-block;
-  padding: 12px 22px;
-  border-radius: 8px;
-  margin-right: 10px;
-  background: #63d9ff;
-  color: #06101a;
-  font-weight: bold;
-}
+        .hero h1 span {
+            color: #42d9ff;
+        }
 
-.button.secondary {
-  background: #151e33;
-  color: white;
-  border: 1px solid #2a3654;
-}
+        .hero h2 {
+            font-size: clamp(22px, 4vw, 34px);
+            font-weight: normal;
+            color: #b8c8d5;
+            margin-bottom: 20px;
+        }
 
-/* Sections */
+        .hero p {
+            max-width: 700px;
+            color: #9eb0bf;
+            font-size: 18px;
+        }
 
-section {
-  padding: 80px 0;
-  border-top: 1px solid #26304a;
-}
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-h2 {
-  font-size: 34px;
-  margin-bottom: 15px;
-}
+        .button {
+            padding: 12px 22px;
+            border-radius: 8px;
+            border: 1px solid #42d9ff;
+            color: #42d9ff;
+            transition: 0.3s;
+        }
 
-.description {
-  color: #aeb8ce;
-  max-width: 700px;
-}
+        .button:hover {
+            background: #42d9ff;
+            color: #07111f;
+        }
 
-/* Skills */
+        .button.primary {
+            background: #42d9ff;
+            color: #07111f;
+            font-weight: bold;
+        }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 25px;
-}
+        /* SECTIONS */
 
-.skill {
-  padding: 8px 15px;
-  border: 1px solid #2d3a58;
-  border-radius: 30px;
-  color: #b8c3d9;
-}
+        section {
+            padding: 90px 0;
+        }
 
-/* Projects */
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 30px;
-}
+        .section-title span {
+            color: #42d9ff;
+        }
 
-.project {
-  background: #121a2d;
-  border: 1px solid #273452;
-  border-radius: 15px;
-  padding: 25px;
-}
+        /* ABOUT */
 
-.project-image {
-  height: 120px;
-  border: 1px dashed #3b4b6d;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #71809c;
-  margin-bottom: 20px;
-}
+        .about-text {
+            max-width: 850px;
+            color: #aebdca;
+            font-size: 18px;
+        }
 
-.project h3 {
-  margin-bottom: 8px;
-}
+        /* SKILLS */
 
-.project p {
-  color: #aeb8ce;
-}
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
 
-/* Contact */
+        .skill {
+            padding: 18px;
+            background: #0c1b2c;
+            border: 1px solid #17344d;
+            border-radius: 10px;
+            text-align: center;
+            color: #cce6f2;
+            transition: 0.3s;
+        }
 
-.contact-box {
-  margin-top: 30px;
-  background: #121a2d;
-  padding: 30px;
-  border-radius: 15px;
-  border: 1px solid #273452;
-}
+        .skill:hover {
+            transform: translateY(-4px);
+            border-color: #42d9ff;
+        }
 
-.contact-box p {
-  color: #aeb8ce;
-  margin: 8px 0;
-}
+        /* PROJECTS */
 
-.contact-box a {
-  color: #63d9ff;
-}
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
 
-/* Footer */
+        .project-card {
+            background: #0c1b2c;
+            border: 1px solid #17344d;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
 
-footer {
-  text-align: center;
-  padding: 30px;
-  color: #71809c;
-}
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #42d9ff;
+        }
 
-/* Mobile */
+        .project-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            padding: 8px;
+            background: #06101c;
+        }
 
-@media (max-width: 700px) {
+        .project-images img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
 
-  h1 {
-    font-size: 45px;
-  }
+        .project-content {
+            padding: 25px;
+        }
 
-  .nav-links {
-    display: none;
-  }
+        .project-content h3 {
+            font-size: 25px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
 
-  .projects {
-    grid-template-columns: 1fr;
-  }
+        .project-content p {
+            color: #aebdca;
+            margin-bottom: 18px;
+        }
 
-  .hero {
-    padding: 80px 0;
-  }
-}
-</style>
+        .project-tech {
+            color: #42d9ff;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            background: #0c1b2c;
+            border: 1px solid #17344d;
+            border-radius: 14px;
+            padding: 30px;
+            max-width: 700px;
+        }
+
+        .contact-box p {
+            color: #aebdca;
+            margin-bottom: 10px;
+        }
+
+        .contact-box strong {
+            color: #42d9ff;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #16314a;
+            padding: 30px 0;
+            text-align: center;
+            color: #718596;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .nav-inner {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 10px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .project-images {
+                grid-template-columns: 1fr;
+            }
+
+            .project-images img {
+                height: 240px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="container navbar">
-    <div class="logo">PG.</div>
+    <!-- NAVIGATION -->
 
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</nav>
+    <nav>
+        <div class="container nav-inner">
 
+            <div class="logo">
+                PG
+            </div>
 
-<header class="container hero">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-  <div class="small-title">
-    Electronics • PCB • Embedded Systems
-  </div>
-
-  <h1>
-    Parniyan <span>Ghaleei</span>
-  </h1>
-
-  <p>
-    Electronics & Embedded Systems Engineer focused on
-    PCB Design, Embedded Hardware and Microcontroller-Based Systems.
-  </p>
-
-  <div class="buttons">
-
-    <a class="button" href="#projects">
-      View Projects
-    </a>
-
-    <a class="button secondary" href="#contact">
-      Contact Me
-    </a>
-
-  </div>
-
-</header>
-
-
-<section id="about">
-
-  <div class="container">
-
-    <h2>About Me</h2>
-
-    <p class="description">
-      I am an electronics engineer interested in hardware design,
-      PCB development and embedded systems. My experience includes
-      schematic design, PCB layout, microcontrollers and hardware
-      prototyping.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section id="skills">
-
-  <div class="container">
-
-    <h2>Skills</h2>
-
-    <p class="description">
-      Tools and technologies I work with.
-    </p>
-
-    <div class="skills">
-
-      <span class="skill">Altium Designer</span>
-      <span class="skill">PCB Design</span>
-      <span class="skill">STM32</span>
-      <span class="skill">AVR</span>
-      <span class="skill">Embedded C</span>
-      <span class="skill">Schematic Design</span>
-      <span class="skill">BOM</span>
-      <span class="skill">UART</span>
-      <span class="skill">SPI</span>
-      <span class="skill">I2C</span>
-      <span class="skill">ADC</span>
-      <span class="skill">PWM</span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="projects">
-
-  <div class="container">
-
-    <h2>Selected Projects</h2>
-
-    <p class="description">
-      Hardware and embedded systems projects.
-      Project images can be added later.
-    </p>
-
-
-    <div class="projects">
-
-
-      <div class="project">
-
-        <div class="project-image">
-          PCB / PROJECT IMAGE
         </div>
-
-        <h3>
-          Multi-Microphone Hearing Device
-        </h3>
-
-        <p>
-          Embedded hardware project using STM32,
-          analog amplification and LED indication.
-        </p>
-
-      </div>
+    </nav>
 
 
-      <div class="project">
+    <!-- HERO -->
 
-        <div class="project-image">
-          PCB / PROJECT IMAGE
+    <header class="hero">
+        <div class="container hero-content">
+
+            <h1>
+                Hi, I'm <span>Parniyan</span>
+            </h1>
+
+            <h2>
+                Electronics & Embedded Systems Engineer
+            </h2>
+
+            <p>
+                Electronics engineer focused on PCB design, embedded systems,
+                microcontrollers and hardware development.
+            </p>
+
+            <div class="buttons">
+                <a class="button primary" href="#projects">
+                    View Projects
+                </a>
+
+                <a class="button" href="#contact">
+                    Contact Me
+                </a>
+            </div>
+
         </div>
-
-        <h3>
-          STM32 Control Board
-        </h3>
-
-        <p>
-          Microcontroller-based control hardware
-          with schematic and PCB design.
-        </p>
-
-      </div>
+    </header>
 
 
-      <div class="project-card">
-    <div class="project-image">
-    <img src="IMG_0885.jpeg" alt="DC Motor Driver">
-    <img src="IMG_0883.jpeg" alt="DC Motor Driver">
-</div>
-    <div class="project-content">
-        <h3>DC Motor Driver</h3>
-        <p>
-            Designed and developed a DC motor driver system for the EMG 49 motor,
-            based on the L6203 motor driver, ENC28J60 Ethernet controller,
-            and an AVR microcontroller.
-        </p>
-        <div class="project-tech">
-            AVR Microcontroller • L6203 • ENC28J60 • SPI • DC Motor Control • PCB Design
+    <!-- ABOUT -->
+
+    <section id="about">
+        <div class="container">
+
+            <h2 class="section-title">
+                About <span>Me</span>
+            </h2>
+
+            <p class="about-text">
+                I am an electronics engineer with experience in PCB design,
+                embedded systems and microcontroller-based hardware development.
+                I enjoy designing practical electronic systems from schematic
+                and component selection to PCB layout, programming and testing.
+                My main interests include hardware design, embedded systems,
+                PCB development and R&D.
+            </p>
+
         </div>
-    </div>
-</div>
+    </section>
 
 
-      <div class="project">
+    <!-- SKILLS -->
 
-        <div class="project-image">
-          PCB / PROJECT IMAGE
+    <section id="skills">
+        <div class="container">
+
+            <h2 class="section-title">
+                Technical <span>Skills</span>
+            </h2>
+
+            <div class="skills">
+
+                <div class="skill">Altium Designer</div>
+                <div class="skill">PCB Design</div>
+                <div class="skill">Schematic Design</div>
+                <div class="skill">STM32</div>
+                <div class="skill">AVR</div>
+                <div class="skill">Embedded C</div>
+                <div class="skill">BOM</div>
+                <div class="skill">UART</div>
+                <div class="skill">SPI</div>
+                <div class="skill">I2C</div>
+                <div class="skill">ADC</div>
+                <div class="skill">PWM</div>
+
+            </div>
+
         </div>
-
-        <h3>
-          ATmega32 Disinfection Device
-        </h3>
-
-        <p>
-          Control board project based on ATmega32
-          with motor-driving hardware.
-        </p>
-
-      </div>
+    </section>
 
 
-    </div>
+    <!-- PROJECTS -->
 
-  </div>
+    <section id="projects">
+        <div class="container">
 
-</section>
+            <h2 class="section-title">
+                Featured <span>Projects</span>
+            </h2>
+
+            <div class="projects">
+
+                <!-- DC MOTOR DRIVER -->
+
+                <article class="project-card">
+
+                    <div class="project-images">
+
+                        <img
+                            src="IMG_0885.jpeg"
+                            alt="DC Motor Driver PCB"
+                        >
+
+                        <img
+                            src="IMG_0883.jpeg"
+                            alt="DC Motor Driver Project"
+                        >
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            DC Motor Driver
+                        </h3>
+
+                        <p>
+                            Designed and developed a DC motor driver system
+                            for the EMG 49 motor, based on the L6203 motor
+                            driver, ENC28J60 Ethernet controller, and an AVR
+                            microcontroller.
+                        </p>
+
+                        <div class="project-tech">
+                            AVR Microcontroller • L6203 • ENC28J60 • SPI •
+                            DC Motor Control • PCB Design
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+    </section>
 
 
-<section id="contact">
+    <!-- CONTACT -->
 
-  <div class="container">
+    <section id="contact">
+        <div class="container">
 
-    <h2>Contact</h2>
+            <h2 class="section-title">
+                Contact <span>Me</span>
+            </h2>
 
-    <p class="description">
-      Interested in electronics, PCB design and embedded hardware opportunities.
-    </p>
+            <div class="contact-box">
 
-    <div class="contact-box">
+                <p>
+                    Interested in electronics, PCB design, embedded systems
+                    and R&D opportunities.
+                </p>
 
-      <p>
-        GitHub:
-        <a href="https://github.com/Parniyanghaleei">
-          github.com/Parniyanghaleei
-        </a>
-      </p>
+                <p>
+                    <strong>Email:</strong>
+                    Your Email
+                </p>
 
-      <p>
-        Email: Add your professional email here
-      </p>
+                <p>
+                    <strong>LinkedIn:</strong>
+                    Your LinkedIn
+                </p>
 
-    </div>
+                <p>
+                    <strong>GitHub:</strong>
+                    Parniyanghaleei
+                </p>
 
-  </div>
+            </div>
 
-</section>
+        </div>
+    </section>
 
 
-<footer>
+    <!-- FOOTER -->
 
-  © 2026 Parniyan Ghaleei
-
-</footer>
+    <footer>
+        <div class="container">
+            © 2026 Parniyan Ghaleei — Electronics & Embedded Systems Engineer
+        </div>
+    </footer>
 
 </body>
 </html>
