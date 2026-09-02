@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parniyan Ghaleei | Electronics Engineer</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: #f5f7ff;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Navigation */
+
+nav {
+  padding: 25px 0;
+  border-bottom: 1px solid #26304a;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #63d9ff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  color: #aeb8ce;
+}
+
+.nav-links a:hover {
+  color: #63d9ff;
+}
+
+/* Hero */
+
+.hero {
+  padding: 120px 0;
+}
+
+.small-title {
+  color: #63d9ff;
+  letter-spacing: 3px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 65px;
+  margin: 15px 0;
+}
+
+h1 span {
+  color: #63d9ff;
+}
+
+.hero p {
+  max-width: 650px;
+  color: #aeb8ce;
+  font-size: 19px;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  margin-right: 10px;
+  background: #63d9ff;
+  color: #06101a;
+  font-weight: bold;
+}
+
+.button.secondary {
+  background: #151e33;
+  color: white;
+  border: 1px solid #2a3654;
+}
+
+/* Sections */
+
+section {
+  padding: 80px 0;
+  border-top: 1px solid #26304a;
+}
+
+h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #aeb8ce;
+  max-width: 700px;
+}
+
+/* Skills */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.skill {
+  padding: 8px 15px;
+  border: 1px solid #2d3a58;
+  border-radius: 30px;
+  color: #b8c3d9;
+}
+
+/* Projects */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.project {
+  background: #121a2d;
+  border: 1px solid #273452;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.project-image {
+  height: 120px;
+  border: 1px dashed #3b4b6d;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #71809c;
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  margin-bottom: 8px;
+}
+
+.project p {
+  color: #aeb8ce;
+}
+
+/* Contact */
+
+.contact-box {
+  margin-top: 30px;
+  background: #121a2d;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #273452;
+}
+
+.contact-box p {
+  color: #aeb8ce;
+  margin: 8px 0;
+}
+
+.contact-box a {
+  color: #63d9ff;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #71809c;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container navbar">
+    <div class="logo">PG.</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+
+<header class="container hero">
+
+  <div class="small-title">
+    Electronics • PCB • Embedded Systems
+  </div>
+
+  <h1>
+    Parniyan <span>Ghaleei</span>
+  </h1>
+
+  <p>
+    Electronics & Embedded Systems Engineer focused on
+    PCB Design, Embedded Hardware and Microcontroller-Based Systems.
+  </p>
+
+  <div class="buttons">
+
+    <a class="button" href="#projects">
+      View Projects
+    </a>
+
+    <a class="button secondary" href="#contact">
+      Contact Me
+    </a>
+
+  </div>
+
+</header>
+
+
+<section id="about">
+
+  <div class="container">
+
+    <h2>About Me</h2>
+
+    <p class="description">
+      I am an electronics engineer interested in hardware design,
+      PCB development and embedded systems. My experience includes
+      schematic design, PCB layout, microcontrollers and hardware
+      prototyping.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section id="skills">
+
+  <div class="container">
+
+    <h2>Skills</h2>
+
+    <p class="description">
+      Tools and technologies I work with.
+    </p>
+
+    <div class="skills">
+
+      <span class="skill">Altium Designer</span>
+      <span class="skill">PCB Design</span>
+      <span class="skill">STM32</span>
+      <span class="skill">AVR</span>
+      <span class="skill">Embedded C</span>
+      <span class="skill">Schematic Design</span>
+      <span class="skill">BOM</span>
+      <span class="skill">UART</span>
+      <span class="skill">SPI</span>
+      <span class="skill">I2C</span>
+      <span class="skill">ADC</span>
+      <span class="skill">PWM</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="projects">
+
+  <div class="container">
+
+    <h2>Selected Projects</h2>
+
+    <p class="description">
+      Hardware and embedded systems projects.
+      Project images can be added later.
+    </p>
+
+
+    <div class="projects">
+
+
+      <div class="project">
+
+        <div class="project-image">
+          PCB / PROJECT IMAGE
+        </div>
+
+        <h3>
+          Multi-Microphone Hearing Device
+        </h3>
+
+        <p>
+          Embedded hardware project using STM32,
+          analog amplification and LED indication.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-image">
+          PCB / PROJECT IMAGE
+        </div>
+
+        <h3>
+          STM32 Control Board
+        </h3>
+
+        <p>
+          Microcontroller-based control hardware
+          with schematic and PCB design.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-image">
+          PCB / PROJECT IMAGE
+        </div>
+
+        <h3>
+          Automotive Fan Driver
+        </h3>
+
+        <p>
+          Hardware design project for controlling
+          an automotive cooling fan.
+        </p>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-image">
+          PCB / PROJECT IMAGE
+        </div>
+
+        <h3>
+          ATmega32 Disinfection Device
+        </h3>
+
+        <p>
+          Control board project based on ATmega32
+          with motor-driving hardware.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="contact">
+
+  <div class="container">
+
+    <h2>Contact</h2>
+
+    <p class="description">
+      Interested in electronics, PCB design and embedded hardware opportunities.
+    </p>
+
+    <div class="contact-box">
+
+      <p>
+        GitHub:
+        <a href="https://github.com/Parniyanghaleei">
+          github.com/Parniyanghaleei
+        </a>
+      </p>
+
+      <p>
+        Email: Add your professional email here
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  © 2026 Parniyan Ghaleei
+
+</footer>
+
+</body>
+</html>
