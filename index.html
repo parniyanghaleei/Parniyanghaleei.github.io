@@ -292,12 +292,21 @@
             }
 
             .project-images {
-                grid-template-columns: 1fr;
-            }
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: #06101c;
+    overflow: hidden;
+}
 
             .project-images img {
-                height: 240px;
-            }
+    width: 50%;
+    height: 200px;
+    object-fit: contain;
+    display: block;
+    background: #07111f;
+    border-radius: 8px;
+}
         }
     </style>
 </head>
