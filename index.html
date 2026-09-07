@@ -6,702 +6,398 @@
 
     <title>Parniyan Ghaleei | Electronics & Embedded Systems Engineer</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta name="description"
+          content="Portfolio of Parniyan Ghaleei — Electronics, Embedded Systems, PCB Design, Robotics and R&D.">
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #07111f;
-            color: #eaf6ff;
-            line-height: 1.7;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        /* NAVBAR */
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(7, 17, 31, 0.95);
-            border-bottom: 1px solid #16314a;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-inner {
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-            color: #42d9ff;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #b9cbd8;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #42d9ff;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: clamp(42px, 8vw, 76px);
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #42d9ff;
-        }
-
-        .hero h2 {
-            font-size: clamp(22px, 4vw, 34px);
-            font-weight: normal;
-            color: #b8c8d5;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 700px;
-            color: #9eb0bf;
-            font-size: 18px;
-        }
-
-        .buttons {
-            margin-top: 30px;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            padding: 12px 22px;
-            border-radius: 8px;
-            border: 1px solid #42d9ff;
-            color: #42d9ff;
-            transition: 0.3s;
-        }
-
-        .button:hover {
-            background: #42d9ff;
-            color: #07111f;
-        }
-
-        .button.primary {
-            background: #42d9ff;
-            color: #07111f;
-            font-weight: bold;
-        }
-
-        /* SECTIONS */
-
-        section {
-            padding: 90px 0;
-        }
-
-        .section-title {
-            font-size: 36px;
-            margin-bottom: 40px;
-            color: #ffffff;
-        }
-
-        .section-title span {
-            color: #42d9ff;
-        }
-
-        /* ABOUT */
-
-        .about-text {
-            max-width: 850px;
-            color: #aebdca;
-            font-size: 18px;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-
-        .skill {
-            padding: 18px;
-            background: #0c1b2c;
-            border: 1px solid #17344d;
-            border-radius: 10px;
-            text-align: center;
-            color: #cce6f2;
-            transition: 0.3s;
-        }
-
-        .skill:hover {
-            transform: translateY(-4px);
-            border-color: #42d9ff;
-        }
-
-        /* PROJECTS */
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .project-card {
-            background: #0c1b2c;
-            border: 1px solid #17344d;
-            border-radius: 14px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #42d9ff;
-        }
-
-        .project-images {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            padding: 8px;
-            background: #06101c;
-        }
-
-        .project-images img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            border-radius: 8px;
-        }
-
-        .project-content {
-            padding: 25px;
-        }
-
-        .project-content h3 {
-            font-size: 25px;
-            margin-bottom: 12px;
-            color: #ffffff;
-        }
-
-        .project-content p {
-            color: #aebdca;
-            margin-bottom: 18px;
-        }
-
-        .project-tech {
-            color: #42d9ff;
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
-        /* CONTACT */
-
-        .contact-box {
-            background: #0c1b2c;
-            border: 1px solid #17344d;
-            border-radius: 14px;
-            padding: 30px;
-            max-width: 700px;
-        }
-
-        .contact-box p {
-            color: #aebdca;
-            margin-bottom: 10px;
-        }
-
-        .contact-box strong {
-            color: #42d9ff;
-        }
-
-        /* FOOTER */
-
-        footer {
-            border-top: 1px solid #16314a;
-            padding: 30px 0;
-            text-align: center;
-            color: #718596;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 700px) {
-
-            .nav-inner {
-                flex-direction: column;
-                padding: 15px 0;
-                gap: 10px;
-            }
-
-            .nav-links {
-                gap: 15px;
-                font-size: 14px;
-            }
-
-            .hero {
-                min-height: 75vh;
-            }
-
-            section {
-                padding: 65px 0;
-            }
-
-           .project-images {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    background: #06101c;
-    overflow: hidden;
-}
-
-.project-images img {
-    width: 100%;
-    height: 240px;
-}
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+<header class="navbar">
+    <div class="nav-inner">
+        <a href="#home" class="logo">PG.</a>
 
-    <nav>
-        <div class="container nav-inner">
+        <nav>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#achievement">Achievement</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
-            <div class="logo">
-                PG
+
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">ELECTRONICS · EMBEDDED · ROBOTICS</p>
+
+        <h1>
+            Parniyan<br>
+            <span>Ghaleei</span>
+        </h1>
+
+        <p class="hero-title">
+            Electronics & Embedded Systems Engineer
+        </p>
+
+        <p class="hero-description">
+            I design electronic hardware, PCB systems and embedded solutions
+            with a focus on robotics, product development and R&D.
+        </p>
+
+        <a href="#projects" class="hero-button">
+            Explore my work ↓
+        </a>
+
+    </div>
+
+    <div class="hero-visual">
+        <div class="visual-placeholder">
+            <span>YOUR-HERO-IMAGE-HERE</span>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects" class="projects section">
+
+    <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Projects</h2>
+    </div>
+
+
+    <div class="project-grid">
+
+
+        <!-- PROJECT 01 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+                <span>YOUR-PROJECT-IMAGE-HERE</span>
             </div>
 
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="project-info">
 
+                <span class="project-number">01</span>
+
+                <h3>Motor Driver Boards</h3>
+
+                <p>
+                    Single, Dual & Four-Channel Motor Drivers
+                </p>
+
+                <span class="project-tag">
+                    Hardware · PCB Design
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 02 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+                <span>YOUR-PROJECT-IMAGE-HERE</span>
+            </div>
+
+            <div class="project-info">
+
+                <span class="project-number">02</span>
+
+                <h3>COVID-19 Disinfection Robot</h3>
+
+                <p>
+                    Robotics Hardware & Embedded Systems
+                </p>
+
+                <span class="project-tag">
+                    Robotics · Embedded
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 03 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+                <span>YOUR-PROJECT-IMAGE-HERE</span>
+            </div>
+
+            <div class="project-info">
+
+                <span class="project-number">03</span>
+
+                <h3>Hand Sanitizer Device</h3>
+
+                <p>
+                    Electronic control and embedded hardware
+                    developed for an automated sanitizing device.
+                </p>
+
+                <span class="project-tag">
+                    Electronics · Embedded
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 04 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+                <span>YOUR-PROJECT-IMAGE-HERE</span>
+            </div>
+
+            <div class="project-info">
+
+                <span class="project-number">04</span>
+
+                <h3>Home Steamer Control Board</h3>
+
+                <p>
+                    Control electronics and PCB development
+                    for a home steamer system.
+                </p>
+
+                <span class="project-tag">
+                    PCB · Control
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 05 -->
+
+        <article class="project-card">
+
+            <div class="project-image">
+                <span>YOUR-PROJECT-IMAGE-HERE</span>
+            </div>
+
+            <div class="project-info">
+
+                <span class="project-number">05</span>
+
+                <h3>Chemical Injection Control System</h3>
+
+                <p>
+                    Electronic control hardware for
+                    chemical injection applications.
+                </p>
+
+                <span class="project-tag">
+                    Electronics · R&D
+                </span>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="about section">
+
+    <div class="section-heading">
+        <p class="eyebrow">WHO I AM</p>
+        <h2>About Me</h2>
+    </div>
+
+    <div class="about-content">
+
+        <div class="about-image">
+            <span>YOUR-PORTRAIT-IMAGE-HERE</span>
         </div>
-    </nav>
 
+        <div class="about-text">
 
-    <!-- HERO -->
-
-    <header class="hero">
-        <div class="container hero-content">
-
-            <h1>
-                Hi, I'm <span>Parniyan</span>
-            </h1>
-
-            <h2>
-                Electronics & Embedded Systems Engineer
-            </h2>
+            <p class="large-text">
+                Electronics engineer passionate about turning ideas
+                into real hardware.
+            </p>
 
             <p>
-                Electronics engineer focused on PCB design, embedded systems,
-                microcontrollers and hardware development.
+                My experience includes PCB design, embedded systems,
+                microcontrollers, robotics hardware and electronic
+                product development.
             </p>
 
-            <div class="buttons">
-                <a class="button primary" href="#projects">
-                    View Projects
-                </a>
-
-                <a class="button" href="#contact">
-                    Contact Me
-                </a>
-            </div>
-
-        </div>
-    </header>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-        <div class="container">
-
-            <h2 class="section-title">
-                About <span>Me</span>
-            </h2>
-
-            <p class="about-text">
-                I am an electronics engineer with experience in PCB design,
-                embedded systems and microcontroller-based hardware development.
-                I enjoy designing practical electronic systems from schematic
-                and component selection to PCB layout, programming and testing.
-                My main interests include hardware design, embedded systems,
-                PCB development and R&D.
+            <p>
+                I enjoy working on projects where hardware,
+                firmware and real-world engineering come together.
             </p>
-
-        </div>
-    </section>
-
-    <!-- EDUCATION -->
-
-<section id="education">
-    <div class="container">
-
-        <h2 class="section-title">
-            Education & <span>Achievements</span>
-        </h2>
-
-        <div class="project-card">
-            <div class="project-content">
-
-                <h3>Bachelor's Degree – Biomedical Engineering</h3>
-
-                <p>
-                    QIAU, Qazvin
-                </p>
-
-                <div class="project-tech">
-                    September 2016 – September 2020
-                </div>
-
-                <br>
-
-                <h3>First Place – Asian Industrial Robot Competition</h3>
-
-                <p>
-                    Awarded First Place in the Asian Industrial Robot Competition.
-                </p>
-
-                <div class="project-tech">
-                    November 2018
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-    <div class="container">
-
-        <h2 class="section-title">
-            Work <span>Experience</span>
-        </h2>
-
-        <div class="project-card">
-            <div class="project-content">
-
-                <h3>Electronics Expert – Tosan Techno</h3>
-
-                <p>
-                    December 2024 – December 2025
-                </p>
-
-                <p>
-                    Diagnosed and resolved a wide range of POS device issues,
-                    including component failures, connectivity problems and
-                    operational errors. Applied systematic troubleshooting
-                    techniques to identify root causes and implement effective
-                    solutions.
-                </p>
-
-                <div class="project-tech">
-                    Electronics • POS Devices • Troubleshooting • Hardware Repair
-                </div>
-
-            </div>
-        </div>
-
-        <br>
-
-        <div class="project-card">
-            <div class="project-content">
-
-                <h3>Electronic Expert – Mechatronics Research Laboratory (MRL)</h3>
-
-                <p>
-                    2017 – 2021
-                </p>
-
-                <p>
-                    Contributed to a robotics team focused on industrial
-                    automation, gaining practical experience in electronics,
-                    programming and robotics systems.
-                </p>
-
-                <p>
-                    Designed and developed a DC motor driver system for the
-                    EMG 49 motor using the L6203 driver, ENC28J60 Ethernet
-                    controller and AVR microcontroller with SPI interface.
-                </p>
-
-                <div class="project-tech">
-                    Industrial Robotics • AVR • L6203 • ENC28J60 • SPI •
-                    Motor Driver • Electronics
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-    <!-- SKILLS -->
-
-    <section id="skills">
-        <div class="container">
-
-            <h2 class="section-title">
-                Technical <span>Skills</span>
-            </h2>
 
             <div class="skills">
 
-                <div class="skill">Altium Designer</div>
-                <div class="skill">PCB Design</div>
-                <div class="skill">Schematic Design</div>
-                <div class="skill">STM32</div>
-                <div class="skill">AVR</div>
-                <div class="skill">Embedded C</div>
-                <div class="skill">BOM</div>
-                <div class="skill">UART</div>
-                <div class="skill">SPI</div>
-                <div class="skill">I2C</div>
-                <div class="skill">ADC</div>
-                <div class="skill">PWM</div>
+                <span>Altium Designer</span>
+                <span>PCB Design</span>
+                <span>STM32</span>
+                <span>AVR</span>
+                <span>Embedded Systems</span>
+                <span>Robotics</span>
+                <span>R&D</span>
 
             </div>
 
         </div>
-    </section>
-
-
-    <!-- PROJECTS -->
-
-    <section id="projects">
-        <div class="container">
-
-            <h2 class="section-title">
-                Featured <span>Projects</span>
-            </h2>
-
-            <div class="projects">
-
-                <!-- DC MOTOR DRIVER -->
-
-                <article class="project-card">
-
-                    <div class="project-images">
-
-                        <img
-                            src="IMG_0885.jpeg"
-                            alt="DC Motor Driver PCB"
-                        >
-
-                        <img
-                            src="IMG_0883.jpeg"
-                            alt="DC Motor Driver Project"
-                        >
-
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>
-                            DC Motor Driver
-                        </h3>
-
-                        <p>
-                            Designed and developed a DC motor driver system
-                            for the EMG 49 motor, based on the L6203 motor
-                            driver, ENC28J60 Ethernet controller, and an AVR
-                            microcontroller.
-                        </p>
-
-                        <div class="project-tech">
-                            AVR Microcontroller • L6203 • ENC28J60 • SPI •
-                            DC Motor Control • PCB Design
-                        </div>
-
-                    </div>
-
-                </article>
-                <article class="project-card">
-
-    <div class="project-images">
-
-        <img
-            src="IMG_0882.jpeg"
-            alt="Board Master Home Steamer PCB"
-        >
-
-        <img
-            src="IMG_0878.jpeg"
-            alt="Board Master Home Steamer"
-        >
 
     </div>
 
-    <div class="project-content">
+</section>
 
-        <h3>
-            Board Master – Home Steamer
-        </h3>
 
-        <p>
-            Designed and implemented the main control board for a home
-            steamer appliance, integrating control and monitoring functions
-            for reliable operation.
-        </p>
+<!-- ================= EXPERIENCE ================= -->
 
-        <p>
-            Integrated an electric valve, P100 water-level sensor, and
-            two piezoelectric sensors for water-flow management, monitoring,
-            and operation feedback.
-        </p>
+<section id="experience" class="experience section">
 
-        <div class="project-tech">
-            AVR Microcontroller • P100 Sensor • Piezoelectric Sensors •
-            Electric Valve • Embedded C • Hardware Design
-        </div>
-
+    <div class="section-heading">
+        <p class="eyebrow">MY JOURNEY</p>
+        <h2>Experience</h2>
     </div>
 
-</article>
-                <article class="project-card">
 
-    <div class="project-images">
+    <div class="timeline">
 
-        <img
-            src="IMG_0876.jpeg"
-            alt="Hand Sanitizer Device Board"
-        >
+        <div class="timeline-item">
 
-        <img
-            src="IMG_0875.jpeg"
-            alt="Hand Sanitizer Device Board"
-        >
+            <span class="timeline-year">2024 — 2025</span>
 
-    </div>
-
-    <div class="project-content">
-
-        <h3>
-            Hand Sanitizer Device Board
-        </h3>
-
-        <p>
-            Designed and implemented the main control board for a hand
-            sanitizer device, integrating sensing and control functionality
-            for reliable and user-friendly operation.
-        </p>
-
-        <p>
-            Utilized a VS1838 infrared receiver operating at 38 kHz and
-            an AVR microcontroller for device control and sensor data
-            processing.
-        </p>
-
-        <div class="project-tech">
-            AVR Microcontroller • VS1838 • 38 kHz IR • Embedded C •
-            Sensor Interface • PCB Design
-        </div>
-
-    </div>
-
-</article>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-        <div class="container">
-
-            <h2 class="section-title">
-                Contact <span>Me</span>
-            </h2>
-
-            <div class="contact-box">
-
-                <p>
-                    Interested in electronics, PCB design, embedded systems
-                    and R&D opportunities.
+            <div>
+                <h3>Electronics Expert</h3>
+                <p class="company">
+                    Tosan Techno
                 </p>
-
                 <p>
-                    <strong>Email:</strong>
-                   ghaleeiparniyan@gmail.com
+                    Electronics development, troubleshooting
+                    and technical work.
                 </p>
-
-
-                <p>GitHub: <a href="https://github.com/Parniyanghaleei" target="_blank">Parniyanghaleei</a></p>
-
             </div>
 
         </div>
-    </section>
 
 
-    <!-- FOOTER -->
+        <div class="timeline-item">
 
-    <footer>
-        <div class="container">
-            © 2026 Parniyan Ghaleei — Electronics & Embedded Systems Engineer
+            <span class="timeline-year">2016 — 2020</span>
+
+            <div>
+                <h3>Robotics Hardware & Motor Driver Designer</h3>
+                <p class="company">
+                    MRL@Work
+                </p>
+                <p>
+                    Robotics hardware development,
+                    motor driver design and electronic systems.
+                </p>
+            </div>
+
         </div>
-    </footer>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ACHIEVEMENT ================= -->
+
+<section id="achievement" class="achievement section">
+
+    <div class="achievement-image">
+        <span>YOUR-TEAM-IMAGE-HERE</span>
+    </div>
+
+    <div class="achievement-content">
+
+        <p class="eyebrow">ACHIEVEMENT</p>
+
+        <h2>
+            1st Place
+        </h2>
+
+        <p class="achievement-title">
+            RoboCup Asia-Pacific 2018
+        </p>
+
+        <p>
+            Robotics competition achievement with
+            MRL@Work.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact section">
+
+    <p class="eyebrow">GET IN TOUCH</p>
+
+    <h2>
+        Let's build<br>
+        something together.
+    </h2>
+
+    <p>
+        Interested in electronics, embedded systems,
+        robotics or R&D?
+    </p>
+
+    <div class="contact-links">
+
+        <a href="mailto:YOUR-EMAIL-HERE">
+            Email
+        </a>
+
+        <a href="https://github.com/Parniyanghaleei"
+           target="_blank">
+            GitHub
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 Parniyan Ghaleei</p>
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
