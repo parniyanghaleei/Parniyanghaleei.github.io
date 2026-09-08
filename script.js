@@ -1,141 +1,104 @@
-/* =========================
-   MOBILE MENU
-========================= */
+document.addEventListener("DOMContentLoaded", () => {
 
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+    /* =========================
+       NAVBAR
+    ========================= */
 
-if (menuToggle && navLinks) {
+    const navbar = document.querySelector(".navbar");
 
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
+    window.addEventListener("scroll", () => {
 
-}
-
-
-/* =========================
-   CLOSE MOBILE MENU
-========================= */
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        if (navLinks) {
-            navLinks.classList.remove("active");
+        if (window.scrollY > 30) {
+            navbar.style.boxShadow =
+                "0 8px 30px rgba(0,0,0,.06)";
+        } else {
+            navbar.style.boxShadow = "none";
         }
 
     });
 
-});
+
+    /* =========================
+       REVEAL
+    ========================= */
+
+    const elements = document.querySelectorAll(
+        ".section-heading, " +
+        ".about-content, " +
+        ".skill-card, " +
+        ".timeline-item, " +
+        ".project-card, " +
+        ".robot-image, " +
+        ".achievement, " +
+        ".team-gallery img"
+    );
+
+    const observer = new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform =
+                        "translateY(0)";
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: .12
+        }
+    );
 
 
-/* =========================
-   NAVBAR SCROLL EFFECT
-========================= */
+    elements.forEach(element => {
 
-const navbar = document.querySelector(".navbar");
+        element.style.opacity = "0";
+        element.style.transform = "translateY(30px)";
+        element.style.transition =
+            "opacity .7s ease, transform .7s ease";
 
-window.addEventListener("scroll", () => {
-
-    if (!navbar) return;
-
-    if (window.scrollY > 30) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-
-});
-
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const revealElements = document.querySelectorAll(".reveal");
-
-const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("revealed");
-
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.12
-    }
-);
-
-
-revealElements.forEach(element => {
-    revealObserver.observe(element);
-});
-
-
-/* =========================
-   PROJECT CARD EFFECT
-========================= */
-
-const projectCards = document.querySelectorAll(".project-card");
-
-projectCards.forEach(card => {
-
-    card.addEventListener("mousemove", event => {
-
-        const rect = card.getBoundingClientRect();
-
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
+        observer.observe(element);
 
     });
 
-});
 
+    /* =========================
+       PROJECT HOVER
+    ========================= */
 
-/* =========================
-   SMOOTH ANCHOR SCROLL
-========================= */
+    document.querySelectorAll(".project-card")
+        .forEach(card => {
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            card.addEventListener("mousemove", event => {
 
-    anchor.addEventListener("click", function (event) {
+                const rect =
+                    card.getBoundingClientRect();
 
-        const targetId = this.getAttribute("href");
+                const x =
+                    event.clientX - rect.left;
 
-        if (!targetId || targetId === "#") return;
+                const y =
+                    event.clientY - rect.top;
 
-        const target = document.querySelector(targetId);
+                card.style.setProperty(
+                    "--mouse-x",
+                    `${x}px`
+                );
 
-        if (!target) return;
+                card.style.setProperty(
+                    "--mouse-y",
+                    `${y}px`
+                );
 
-        event.preventDefault();
+            });
 
-        target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
         });
 
-    });
-
 });
-
-
-/* =========================
-   PAGE READY
-========================= */
-
-document.body.classList.add("page-loaded");
