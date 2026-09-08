@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Parniyan Ghaleei | Electronics & PCB Design Engineer</title>
+    <title>Parniyan Ghaleei — Electronics & PCB Design Engineer</title>
 
     <meta name="description"
           content="Portfolio of Parniyan Ghaleei — Electronics, PCB Design, Embedded Systems, Robotics and R&D.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= NAVIGATION ================= -->
+
 <header class="navbar">
+
     <div class="nav-inner">
 
-        <a href="#home" class="logo">PG.</a>
+        <a href="#home" class="logo">
+            PG<span>.</span>
+        </a>
 
         <nav>
             <a href="#projects">Projects</a>
@@ -28,7 +39,12 @@
             <a href="#contact">Contact</a>
         </nav>
 
+        <a href="#contact" class="nav-contact">
+            Let's talk
+        </a>
+
     </div>
+
 </header>
 
 
@@ -38,44 +54,81 @@
 
 <section id="home" class="hero">
 
-    <div class="hero-content">
+    <div class="hero-left">
 
-        <p class="eyebrow">
-            ELECTRONICS · PCB DESIGN · EMBEDDED · ROBOTICS
-        </p>
+        <div class="hero-kicker">
+            ELECTRONICS · PCB · EMBEDDED · ROBOTICS
+        </div>
 
         <h1>
-            Parniyan<br>
+            Parniyan
             <span>Ghaleei</span>
         </h1>
 
-        <p class="hero-title">
-            Electronics & PCB Design Engineer
-        </p>
+        <div class="hero-bottom">
 
-        <p class="hero-description">
-            I design electronic hardware, PCB systems and embedded solutions
-            with a focus on robotics, product development and R&D.
-        </p>
+            <p class="hero-role">
+                Electronics & PCB Design Engineer
+            </p>
 
-        <a href="#projects" class="hero-button">
-            Explore my work ↓
+            <p class="hero-description">
+                I design electronic hardware, PCB systems and embedded solutions
+                for robotics, product development and R&D.
+            </p>
+
+        </div>
+
+        <a href="#projects" class="scroll-link">
+            <span>Explore selected work</span>
+            <span class="arrow">↓</span>
         </a>
 
     </div>
 
 
-    <div class="hero-visual">
+    <div class="hero-right">
 
-        <img
-            src="IMG_1683.jpeg"
-            alt="Parniyan Ghaleei with robotics project"
-            class="hero-image"
-        >
+        <div class="hero-photo">
 
-        <div class="hero-image-label">
-            ELECTRONICS · PCB · ROBOTICS
+            <img
+                src="IMG_1683.jpeg"
+                alt="Parniyan Ghaleei with robotics project"
+            >
+
+            <div class="photo-index">
+                01 / 07
+            </div>
+
         </div>
+
+        <div class="hero-caption">
+            HARDWARE · DESIGN · ENGINEERING
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro section">
+
+    <div class="intro-label">
+        01 — INTRODUCTION
+    </div>
+
+    <div class="intro-content">
+
+        <p>
+            I am an electronics engineer focused on turning ideas into
+            functional hardware.
+        </p>
+
+        <span>
+            My work combines PCB design, embedded systems, microcontrollers,
+            robotics and practical electronic product development.
+        </span>
 
     </div>
 
@@ -86,183 +139,276 @@
 
 <section id="projects" class="projects section">
 
-    <div class="section-heading">
-        <p class="eyebrow">SELECTED WORK</p>
-        <h2>Projects</h2>
+    <div class="section-top">
+
+        <div>
+            <span class="section-number">02</span>
+            <span class="section-label">SELECTED WORK</span>
+        </div>
+
+        <h2>
+            Projects
+        </h2>
+
     </div>
 
 
-    <div class="project-grid">
+    <!-- PROJECT 01 -->
 
+    <article class="project">
 
-        <!-- PROJECT 01 -->
+        <div class="project-visual">
 
-        <article class="project-card">
+            <div class="project-main">
 
-            <div class="project-gallery">
-
-                <div class="project-main-image">
-                    <img src="IMG_0886.jpeg"
-                         alt="Motor Driver Board">
-                </div>
-
-                <div class="project-thumbnails">
-
-                    <img src="IMG_0883.jpeg"
-                         alt="Motor Driver PCB">
-
-                    <img src="IMG_0884.jpeg"
-                         alt="Motor Driver Electronics">
-
-                </div>
+                <img
+                    src="IMG_0886.jpeg"
+                    alt="Motor Driver Board"
+                >
 
             </div>
 
+            <div class="project-secondary">
+
+                <img
+                    src="IMG_0883.jpeg"
+                    alt="Motor Driver PCB"
+                >
+
+                <img
+                    src="IMG_0884.jpeg"
+                    alt="Motor Driver Electronics"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="project-details">
+
+            <div class="project-meta">
+                PROJECT 01
+            </div>
+
+            <h3>
+                Motor Driver
+                <span>Boards</span>
+            </h3>
+
+            <p>
+                Development of single, dual and four-channel motor driver
+                boards for robotics and embedded applications.
+            </p>
 
             <div class="project-info">
 
-                <span class="project-number">01</span>
-
-                <h3>Motor Driver Boards</h3>
-
-                <p>
-                    Single, dual and four-channel motor driver boards
-                    designed for robotics and embedded applications.
-                </p>
-
-                <span class="project-tag">
-                    Hardware · PCB Design
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 02 -->
-
-        <article class="project-card">
-
-            <div class="project-gallery">
-
-                <div class="project-main-image">
-                    <img src="IMG_1691.jpeg"
-                         alt="COVID-19 Disinfection Robot">
+                <div>
+                    <small>ROLE</small>
+                    <strong>Hardware Design</strong>
                 </div>
 
-                <div class="project-thumbnails">
+                <div>
+                    <small>TOOLS</small>
+                    <strong>Altium Designer</strong>
+                </div>
 
-                    <img src="IMG_1694.jpeg"
-                         alt="COVID-19 Robotics Project">
-
+                <div>
+                    <small>FOCUS</small>
+                    <strong>PCB · Motor Control</strong>
                 </div>
 
             </div>
 
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 02 -->
+
+    <article class="project project-reverse">
+
+        <div class="project-visual">
+
+            <div class="project-main">
+
+                <img
+                    src="IMG_1691.jpeg"
+                    alt="COVID-19 Disinfection Robot"
+                >
+
+            </div>
+
+            <div class="project-secondary single">
+
+                <img
+                    src="IMG_1694.jpeg"
+                    alt="COVID-19 Disinfection Robot"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="project-details">
+
+            <div class="project-meta">
+                PROJECT 02
+            </div>
+
+            <h3>
+                COVID-19
+                <span>Disinfection Robot</span>
+            </h3>
+
+            <p>
+                Robotics hardware and embedded electronics developed for
+                an automated disinfection system.
+            </p>
 
             <div class="project-info">
 
-                <span class="project-number">02</span>
-
-                <h3>COVID-19 Disinfection Robot</h3>
-
-                <p>
-                    Robotics hardware and embedded electronics developed
-                    for an automated disinfection system.
-                </p>
-
-                <span class="project-tag">
-                    Robotics · Embedded
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 03 -->
-
-        <article class="project-card">
-
-            <div class="project-gallery">
-
-                <div class="project-main-image">
-                    <img src="IMG_0878.jpeg"
-                         alt="Sterilizer Device">
+                <div>
+                    <small>ROLE</small>
+                    <strong>Robotics Hardware</strong>
                 </div>
 
-                <div class="project-thumbnails">
-
-                    <img src="IMG_0882.jpeg"
-                         alt="Sterilizer Control Board">
-
+                <div>
+                    <small>FOCUS</small>
+                    <strong>Embedded · Electronics</strong>
                 </div>
 
             </div>
 
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 03 -->
+
+    <article class="project">
+
+        <div class="project-visual">
+
+            <div class="project-main">
+
+                <img
+                    src="IMG_0878.jpeg"
+                    alt="Hand Sanitizer Device"
+                >
+
+            </div>
+
+            <div class="project-secondary single">
+
+                <img
+                    src="IMG_0882.jpeg"
+                    alt="Hand Sanitizer Control Board"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="project-details">
+
+            <div class="project-meta">
+                PROJECT 03
+            </div>
+
+            <h3>
+                Hand Sanitizer
+                <span>Device</span>
+            </h3>
+
+            <p>
+                Electronic control hardware developed for an automated
+                sanitizing and sterilization system.
+            </p>
 
             <div class="project-info">
 
-                <span class="project-number">03</span>
-
-                <h3>Hand Sanitizer Device</h3>
-
-                <p>
-                    Electronic control hardware developed for an
-                    automated sanitizing and sterilization system.
-                </p>
-
-                <span class="project-tag">
-                    Electronics · Embedded
-                </span>
-
-            </div>
-
-        </article>
-
-
-        <!-- PROJECT 04 -->
-
-        <article class="project-card">
-
-            <div class="project-gallery">
-
-                <div class="project-main-image">
-                    <img src="IMG_0876.jpeg"
-                         alt="Home Steamer Control Board">
+                <div>
+                    <small>ROLE</small>
+                    <strong>Electronics Design</strong>
                 </div>
 
-                <div class="project-thumbnails">
-
-                    <img src="IMG_0875.jpeg"
-                         alt="Home Steamer Electronics">
-
+                <div>
+                    <small>FOCUS</small>
+                    <strong>Control · Embedded</strong>
                 </div>
 
             </div>
 
+        </div>
+
+    </article>
+
+
+    <!-- PROJECT 04 -->
+
+    <article class="project project-reverse">
+
+        <div class="project-visual">
+
+            <div class="project-main">
+
+                <img
+                    src="IMG_0876.jpeg"
+                    alt="Home Steamer Control Board"
+                >
+
+            </div>
+
+            <div class="project-secondary single">
+
+                <img
+                    src="IMG_0875.jpeg"
+                    alt="Home Steamer Electronics"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="project-details">
+
+            <div class="project-meta">
+                PROJECT 04
+            </div>
+
+            <h3>
+                Home Steamer
+                <span>Control Board</span>
+            </h3>
+
+            <p>
+                Control electronics and PCB development for a home
+                steamer system.
+            </p>
 
             <div class="project-info">
 
-                <span class="project-number">04</span>
+                <div>
+                    <small>ROLE</small>
+                    <strong>PCB Design</strong>
+                </div>
 
-                <h3>Home Steamer Control Board</h3>
-
-                <p>
-                    Control electronics and PCB development
-                    for a home steamer system.
-                </p>
-
-                <span class="project-tag">
-                    PCB · Control
-                </span>
+                <div>
+                    <small>FOCUS</small>
+                    <strong>Control Electronics</strong>
+                </div>
 
             </div>
 
-        </article>
+        </div>
 
-
-    </div>
+    </article>
 
 </section>
 
@@ -271,15 +417,23 @@
 
 <section id="about" class="about section">
 
-    <div class="section-heading">
-        <p class="eyebrow">WHO I AM</p>
-        <h2>About Me</h2>
+    <div class="section-top">
+
+        <div>
+            <span class="section-number">03</span>
+            <span class="section-label">ABOUT ME</span>
+        </div>
+
+        <h2>
+            About
+        </h2>
+
     </div>
 
 
-    <div class="about-content">
+    <div class="about-grid">
 
-        <div class="about-image">
+        <div class="about-photo">
 
             <img
                 src="IMG_9217.jpeg"
@@ -289,11 +443,11 @@
         </div>
 
 
-        <div class="about-text">
+        <div class="about-content">
 
-            <p class="large-text">
-                Electronics engineer passionate about turning ideas
-                into real hardware.
+            <p class="about-lead">
+                Electronics engineer passionate about building
+                real-world hardware.
             </p>
 
             <p>
@@ -303,8 +457,8 @@
             </p>
 
             <p>
-                I enjoy working on projects where hardware,
-                firmware and real-world engineering come together.
+                I enjoy working on projects where hardware, firmware
+                and practical engineering come together.
             </p>
 
 
@@ -335,11 +489,12 @@
 
 <section id="experience" class="experience section">
 
-    <div class="section-heading">
+    <div class="section-top">
 
-        <p class="eyebrow">
-            MY JOURNEY
-        </p>
+        <div>
+            <span class="section-number">04</span>
+            <span class="section-label">CAREER</span>
+        </div>
 
         <h2>
             Experience
@@ -348,60 +503,68 @@
     </div>
 
 
-    <div class="timeline">
+    <div class="experience-list">
 
+        <article class="experience-item">
 
-        <div class="timeline-item">
-
-            <span class="timeline-year">
+            <div class="experience-date">
                 2024 — 2025
-            </span>
+            </div>
 
-            <div>
+            <div class="experience-main">
 
                 <h3>
                     Electronics Expert
                 </h3>
 
-                <p class="company">
+                <p class="experience-company">
                     Tosan Techno
                 </p>
 
                 <p>
-                    Electronics development, troubleshooting,
-                    hardware testing and technical work.
+                    Electronics development, hardware testing,
+                    troubleshooting and technical engineering work.
                 </p>
 
             </div>
 
-        </div>
+            <div class="experience-type">
+                ELECTRONICS
+            </div>
+
+        </article>
 
 
-        <div class="timeline-item">
+        <article class="experience-item">
 
-            <span class="timeline-year">
+            <div class="experience-date">
                 2016 — 2020
-            </span>
+            </div>
 
-            <div>
+            <div class="experience-main">
 
                 <h3>
-                    Robotics Hardware & Motor Driver Designer
+                    Robotics Hardware
+                    & Motor Driver Designer
                 </h3>
 
-                <p class="company">
+                <p class="experience-company">
                     MRL@Work
                 </p>
 
                 <p>
-                    Robotics hardware development, motor driver
-                    design and electronic system development.
+                    Robotics hardware development, motor driver design
+                    and electronic system development as part of a
+                    robotics team.
                 </p>
 
             </div>
 
-        </div>
+            <div class="experience-type">
+                ROBOTICS
+            </div>
 
+        </article>
 
     </div>
 
@@ -410,35 +573,40 @@
 
 <!-- ================= ROBOTICS ================= -->
 
-<section id="robotics" class="achievement section">
+<section id="robotics" class="robotics">
 
-    <div class="achievement-image">
+    <div class="robotics-image">
 
         <img
             src="IMG_5063.jpeg"
             alt="Robotics project"
         >
 
+        <span>
+            ROBOTICS PROJECT
+        </span>
+
     </div>
 
 
-    <div class="achievement-content">
+    <div class="robotics-content">
 
-        <p class="eyebrow">
-            ROBOTICS EXPERIENCE
-        </p>
+        <div class="section-label">
+            05 — ROBOTICS EXPERIENCE
+        </div>
 
         <h2>
-            4 Years
+            4
+            <span>Years</span>
         </h2>
 
-        <p class="achievement-title">
+        <h3>
             Robotics Team Experience
-        </p>
+        </h3>
 
         <p>
-            Hands-on experience in robotics hardware,
-            electronics, motor control and embedded systems.
+            Four years of hands-on experience working with robotics
+            hardware, electronics, motor control and embedded systems.
         </p>
 
     </div>
@@ -450,11 +618,12 @@
 
 <section class="team section">
 
-    <div class="section-heading">
+    <div class="section-top">
 
-        <p class="eyebrow">
-            TEAM EXPERIENCE
-        </p>
+        <div>
+            <span class="section-number">06</span>
+            <span class="section-label">TEAM EXPERIENCE</span>
+        </div>
 
         <h2>
             MRL@Work
@@ -463,24 +632,81 @@
     </div>
 
 
-    <div class="team-grid">
+    <div class="team-gallery">
 
-        <div class="team-image">
-
+        <figure>
             <img
                 src="IMG_1690.jpeg"
                 alt="MRL robotics team"
             >
+        </figure>
 
-        </div>
-
-
-        <div class="team-image">
-
+        <figure>
             <img
                 src="IMG_1688.jpeg"
                 alt="MRL robotics team"
             >
+        </figure>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="education section">
+
+    <div class="section-top">
+
+        <div>
+            <span class="section-number">07</span>
+            <span class="section-label">EDUCATION</span>
+        </div>
+
+        <h2>
+            Education
+        </h2>
+
+    </div>
+
+
+    <div class="education-list">
+
+        <div class="education-item">
+
+            <span>
+                2016 — 2020
+            </span>
+
+            <div>
+                <h3>
+                    B.Sc. Biomedical Engineering
+                </h3>
+
+                <p>
+                    Qazvin Islamic Azad University
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="education-item">
+
+            <span>
+                M.Sc.
+            </span>
+
+            <div>
+                <h3>
+                    Electrical Engineering
+                </h3>
+
+                <p>
+                    Telecommunication Systems
+                </p>
+            </div>
 
         </div>
 
@@ -493,11 +719,12 @@
 
 <section id="certificates" class="certificates section">
 
-    <div class="section-heading">
+    <div class="section-top">
 
-        <p class="eyebrow">
-            CERTIFICATIONS
-        </p>
+        <div>
+            <span class="section-number">08</span>
+            <span class="section-label">CERTIFICATIONS</span>
+        </div>
 
         <h2>
             Certificates
@@ -509,21 +736,18 @@
     <div class="certificate-grid">
 
         <div class="certificate-card">
-            <div class="certificate-placeholder">
-                CERTIFICATE 01
-            </div>
+            <span>01</span>
+            <p>Certificate</p>
         </div>
 
         <div class="certificate-card">
-            <div class="certificate-placeholder">
-                CERTIFICATE 02
-            </div>
+            <span>02</span>
+            <p>Certificate</p>
         </div>
 
         <div class="certificate-card">
-            <div class="certificate-placeholder">
-                CERTIFICATE 03
-            </div>
+            <span>03</span>
+            <p>Certificate</p>
         </div>
 
     </div>
@@ -533,34 +757,42 @@
 
 <!-- ================= CONTACT ================= -->
 
-<section id="contact" class="contact section">
+<section id="contact" class="contact">
 
-    <p class="eyebrow">
-        GET IN TOUCH
-    </p>
+    <div class="contact-inner">
 
-    <h2>
-        Let's build<br>
-        something together.
-    </h2>
+        <div class="section-label">
+            09 — CONTACT
+        </div>
 
-    <p>
-        Interested in electronics, embedded systems,
-        robotics or R&D?
-    </p>
+        <h2>
+            Let's build
+            <span>something.</span>
+        </h2>
+
+        <p>
+            Open to opportunities in electronics, PCB design,
+            embedded systems, robotics and R&D.
+        </p>
 
 
-    <div class="contact-links">
+        <div class="contact-links">
 
-        <a href="mailto:YOUR-EMAIL-HERE">
-            Email
-        </a>
+            <a href="mailto:YOUR-EMAIL-HERE">
+                Email
+                <span>↗</span>
+            </a>
 
-        <a href="https://github.com/Parniyanghaleei"
-           target="_blank"
-           rel="noopener">
-            GitHub
-        </a>
+            <a
+                href="https://github.com/Parniyanghaleei"
+                target="_blank"
+                rel="noopener"
+            >
+                GitHub
+                <span>↗</span>
+            </a>
+
+        </div>
 
     </div>
 
@@ -569,11 +801,21 @@
 </main>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-    <p>
-        © 2026 Parniyan Ghaleei
-    </p>
+    <div>
+        PARNIYAN GHALEEI
+    </div>
+
+    <div>
+        ELECTRONICS · PCB · EMBEDDED · ROBOTICS
+    </div>
+
+    <div>
+        © 2026
+    </div>
 
 </footer>
 
