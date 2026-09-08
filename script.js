@@ -1,168 +1,141 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* =========================
+   MOBILE MENU
+========================= */
 
-    /* =========================
-       MOBILE MENU
-    ========================= */
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
+if (menuToggle && navLinks) {
 
-    if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
 
-        menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
+}
 
-            if (navMenu.classList.contains("active")) {
-                menuToggle.textContent = "✕";
-            } else {
-                menuToggle.textContent = "☰";
+
+/* =========================
+   CLOSE MOBILE MENU
+========================= */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        if (navLinks) {
+            navLinks.classList.remove("active");
+        }
+
+    });
+
+});
+
+
+/* =========================
+   NAVBAR SCROLL EFFECT
+========================= */
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+
+    if (!navbar) return;
+
+    if (window.scrollY > 30) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+
+});
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("revealed");
+
+                observer.unobserve(entry.target);
+
             }
-        });
-
-
-        // Close menu after clicking a link
-
-        navMenu.querySelectorAll("a").forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navMenu.classList.remove("active");
-                menuToggle.textContent = "☰";
-
-            });
 
         });
 
+    },
+    {
+        threshold: 0.12
     }
+);
 
 
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
-
-    const revealElements = document.querySelectorAll(
-        ".section, .project-card, .experience-item, .education-item, .skill-row, .achievement"
-    );
-
-    const observer = new IntersectionObserver(
-        (entries, observer) => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("revealed");
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
+revealElements.forEach(element => {
+    revealObserver.observe(element);
+});
 
 
-    revealElements.forEach(element => {
-        element.classList.add("reveal");
-        observer.observe(element);
-    });
+/* =========================
+   PROJECT CARD EFFECT
+========================= */
 
+const projectCards = document.querySelectorAll(".project-card");
 
-    /* =========================
-       NAVBAR ON SCROLL
-    ========================= */
+projectCards.forEach(card => {
 
-    const navbar = document.querySelector(".navbar");
+    card.addEventListener("mousemove", event => {
 
-    window.addEventListener("scroll", () => {
+        const rect = card.getBoundingClientRect();
 
-        if (!navbar) return;
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
 
-        if (window.scrollY > 40) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
 
     });
 
-
-    /* =========================
-       IMAGE HOVER EFFECT
-    ========================= */
-
-    const projectCards = document.querySelectorAll(".project-card");
-
-    projectCards.forEach(card => {
-
-        card.addEventListener("mousemove", event => {
-
-            const rect = card.getBoundingClientRect();
-
-            const x = event.clientX - rect.left;
-            const y = event.clientY - rect.top;
-
-            card.style.setProperty("--mouse-x", `${x}px`);
-            card.style.setProperty("--mouse-y", `${y}px`);
-
-        });
-
-    });
+});
 
 
-    /* =========================
-       CURRENT YEAR
-    ========================= */
+/* =========================
+   SMOOTH ANCHOR SCROLL
+========================= */
 
-    const year = new Date().getFullYear();
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    const footerYear = document.querySelector(
-        ".copyright"
-    );
+    anchor.addEventListener("click", function (event) {
 
-    if (footerYear) {
-        footerYear.textContent =
-            `© ${year} Parniyan Ghaleei`;
-    }
+        const targetId = this.getAttribute("href");
 
+        if (!targetId || targetId === "#") return;
 
-    /* =========================
-       SMOOTH ANCHOR SCROLL
-    ========================= */
+        const target = document.querySelector(targetId);
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        if (!target) return;
 
-        anchor.addEventListener("click", function (event) {
+        event.preventDefault();
 
-            const targetId = this.getAttribute("href");
-
-            if (!targetId || targetId === "#") return;
-
-            const target = document.querySelector(targetId);
-
-            if (!target) return;
-
-            event.preventDefault();
-
-            const navbarHeight =
-                navbar ? navbar.offsetHeight : 0;
-
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                navbarHeight;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: "smooth"
-            });
-
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
         });
 
     });
 
 });
+
+
+/* =========================
+   PAGE READY
+========================= */
+
+document.body.classList.add("page-loaded");
