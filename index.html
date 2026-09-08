@@ -1,642 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Parniyan Ghaleei · Electronics & Embedded Engineer</title>
+    <title>Parniyan Ghaleei | Electronics & Embedded Systems Engineer</title>
 
-    <meta
-        name="description"
-        content="Portfolio of Parniyan Ghaleei — Electronics, PCB Design, Embedded Systems, Robotics and R&D."
-    />
+    <meta name="description"
+          content="Parniyan Ghaleei — Electronics & Embedded Systems Engineer specializing in PCB Design, Altium, STM32, AVR, Robotics and R&D.">
 
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap"
-        rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+<!-- ================= NAVBAR ================= -->
 
-    <!-- ================= HERO ================= -->
+<header class="navbar">
+    <div class="container nav-inner">
 
-    <section class="hero">
+        <a href="#home" class="logo">
+            PG<span>.</span>
+        </a>
 
-        <div class="hero-top">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#robotics">Robotics</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-            <span class="label">
-                <i class="fas fa-microchip"></i>
-                Electronics & Embedded Systems
-            </span>
+        <a href="mailto:Ghaleeiparniyan@gmail.com" class="nav-contact">
+            Let's Talk
+        </a>
 
-            <span class="pill">
-                <i class="fas fa-graduation-cap"></i>
-                M.Sc. Electrical Engineering
-            </span>
-
-        </div>
-
-        <h1 class="hero-title">
-            Engineering Hardware<br />
-            That Brings Ideas to <span class="highlight">Life|</span>
-        </h1>
-
-        <p class="hero-sub">
-            <i class="fas fa-circle"></i>
-            Electronics & PCB Design Engineer with experience in embedded systems,
-            robotics and hardware development.<br />
-            Altium · STM32 · AVR · Embedded Systems · R&D
-        </p>
-
-        <div class="tech-tags">
-            <span>Altium Designer</span>
-            <span>PCB Design</span>
-            <span>STM32</span>
-            <span>AVR</span>
-            <span>C / C++</span>
-            <span>Embedded Systems</span>
-            <span>Robotics</span>
-            <span>R&D</span>
-        </div>
-
-        <div class="scroll-hint">
-            <i class="fas fa-chevron-down"></i>
-            Scroll
-        </div>
-
-    </section>
+    </div>
+</header>
 
 
-    <!-- ================= ABOUT ================= -->
+<main>
 
-    <section>
+<!-- ================= HERO ================= -->
 
-        <h2 class="section-title">About Me</h2>
+<section class="hero" id="home">
 
-        <div class="about-card">
+    <div class="hero-grid">
 
-            <div class="about-layout">
+        <div class="hero-content">
 
-                <div class="about-content">
-
-                    <h2>
-                        From Biomedical Engineering to Electronics
-                    </h2>
-
-                    <div class="sub">
-                        A journey through biomedical engineering, robotics,
-                        PCB design and embedded systems.
-                    </div>
-
-                    <p>
-                        I am an Electronics & PCB Design Engineer with a background
-                        in Biomedical Engineering and hands-on experience in robotics,
-                        embedded systems and hardware development.
-                    </p>
-
-                    <p>
-                        Over the years, I have worked on PCB design, microcontroller-
-                        based systems, motor drivers, control boards and robotics
-                        hardware. My current focus is developing reliable electronic
-                        systems and growing further in R&D and embedded engineering.
-                    </p>
-
-                </div>
-
-                <div class="about-photo">
-                    <img src="IMG_9217.jpeg" alt="Parniyan Ghaleei">
-                </div>
-
+            <div class="eyebrow">
+                <span class="status-dot"></span>
+                Electronics · Embedded · R&D
             </div>
 
-            <div class="about-stats">
+            <h1>
+                Electronics &
+                <span>Embedded Systems</span>
+                Engineer.
+            </h1>
 
-                <span>
-                    <i class="fas fa-robot"></i>
-                    4+ Years Robotics
-                </span>
+            <p class="hero-text">
+                I design practical electronic systems, PCB layouts and
+                embedded hardware for robotics and real-world applications.
+            </p>
 
-                <span>
-                    <i class="fas fa-microchip"></i>
-                    PCB Hardware Design
-                </span>
-
-                <span>
-                    <i class="fas fa-infinity"></i>
-                    ∞ Curiosity
-                </span>
-
-            </div>
-
-            <div class="about-tags">
-
-                <span class="primary">
-                    <i class="fas fa-microchip"></i>
-                    Electronics
-                </span>
-
-                <span>
-                    <i class="fas fa-project-diagram"></i>
-                    PCB Design
-                </span>
-
-                <span>
-                    <i class="fas fa-robot"></i>
-                    Robotics
-                </span>
-
-                <span>
-                    <i class="fas fa-code"></i>
-                    Embedded
-                </span>
-
-                <span>
-                    <i class="fas fa-flask"></i>
-                    R&D
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= TIMELINE + SKILLS ================= -->
-
-    <div class="grid">
-
-        <!-- TIMELINE -->
-
-        <div class="card">
-
-            <div class="icon">
-                <i class="fas fa-timeline"></i>
-            </div>
-
-            <h3>My Timeline</h3>
-
-            <div class="meta">
-                From biomedical engineering to electronics
-            </div>
-
-            <ul>
-
-                <li>
-                    <i class="fas fa-graduation-cap"></i>
-                    <strong>2016–2020</strong>
-                    B.Sc. Biomedical Engineering · QIAU
-                </li>
-
-                <li>
-                    <i class="fas fa-robot"></i>
-                    <strong>2016–2020</strong>
-                    MRL@Work · Robotics Team
-                </li>
-
-                <li>
-                    <i class="fas fa-microchip"></i>
-                    <strong>2018–2020</strong>
-                    Robotics Hardware & Motor Driver Design
-                </li>
-
-                <li>
-                    <i class="fas fa-briefcase"></i>
-                    <strong>2024–2025</strong>
-                    Electronics Expert · Tosan Techno
-                </li>
-
-                <li>
-                    <i class="fas fa-graduation-cap"></i>
-                    <strong>2026</strong>
-                    M.Sc. Electrical Engineering
-                </li>
-
-                <li>
-                    <i class="fas fa-bullseye"></i>
-                    <strong>Goal</strong>
-                    Advanced Electronics · Embedded · R&D
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <!-- TECH STACK -->
-
-        <div class="card">
-
-            <div class="icon">
-                <i class="fas fa-cogs"></i>
-            </div>
-
-            <h3>Tech Stack</h3>
-
-            <div class="meta">
-                Tools and technologies I work with
-            </div>
-
-            <div class="tags">
-
+            <div class="hero-tags">
                 <span>Altium Designer</span>
-                <span>PCB Design</span>
-                <span>Multilayer PCB</span>
                 <span>STM32</span>
                 <span>AVR</span>
-                <span>C / C++</span>
-                <span>Embedded Systems</span>
-                <span>UART</span>
-                <span>SPI</span>
-                <span>I²C</span>
-                <span>ADC</span>
-                <span>PWM</span>
-                <span>Motor Drivers</span>
-                <span>Power Electronics</span>
-                <span>Schematic Design</span>
-                <span>BOM</span>
+                <span>PCB Design</span>
                 <span>Robotics</span>
-                <span>R&D</span>
-
             </div>
 
-            <div class="architecture-badge">
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    Explore My Work
+                    <span>↗</span>
+                </a>
 
-                <i class="fas fa-check-circle"></i>
-
-                Hardware Design · Embedded Systems · R&D
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- ================= PROJECTS ================= -->
-
-    <h2 class="section-title">
-        Projects & Experience
-    </h2>
-
-    <div class="grid projects-grid">
-
-
-        <!-- MOTOR DRIVER -->
-
-        <div class="card project-card">
-
-            <div class="project-image">
-                <img
-                    src="IMG_0886.jpeg"
-                    alt="Motor Driver PCB"
-                />
-            </div>
-
-            <div class="icon">
-                <i class="fas fa-bolt"></i>
-            </div>
-
-            <h3>Motor Driver Boards</h3>
-
-            <div class="meta">
-                PCB Design · Hardware Development
-            </div>
-
-            <p>
-                Motor driver boards designed for controlling DC motors
-                and integrating hardware control electronics.
-            </p>
-
-            <ul>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    Schematic & PCB layout
-                </li>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    Motor control circuitry
-                </li>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    Hardware testing & debugging
-                </li>
-
-            </ul>
-
-            <div class="tags">
-
-                <span>Altium</span>
-                <span>PCB</span>
-                <span>Motor Driver</span>
-
+                <a href="mailto:Ghaleeiparniyan@gmail.com"
+                   class="btn btn-secondary">
+                    Contact Me
+                </a>
             </div>
 
         </div>
 
 
-        <!-- DISINFECTION ROBOT -->
+        <div class="hero-visual">
 
-        <div class="card project-card">
+            <div class="hero-grid-bg"></div>
 
-            <div class="project-image">
-                <img
-                    src="IMG_1691.jpeg"
-                    alt="COVID-19 Disinfection Robot"
-                />
-            </div>
+            <div class="profile-card">
 
-            <div class="icon">
-                <i class="fas fa-robot"></i>
-            </div>
-
-            <h3>COVID-19 Disinfection Robot</h3>
-
-            <div class="meta">
-                Robotics · Embedded Electronics
-            </div>
-
-            <p>
-                Hardware development for an autonomous disinfection
-                robot combining electronics, control and robotics.
-            </p>
-
-            <ul>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    Robotics hardware
-                </li>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    Embedded electronics
-                </li>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    System integration
-                </li>
-
-            </ul>
-
-            <div class="tags">
-
-                <span>Robotics</span>
-                <span>Embedded</span>
-                <span>Electronics</span>
-
-            </div>
-
-        </div>
-
-
-        <!-- HAND SANITIZER -->
-
-        <div class="card project-card">
-
-            <div class="project-image">
-                <img
-                    src="IMG_0878.jpeg"
-                    alt="Hand Sanitizer Device PCB"
-                />
-            </div>
-
-            <div class="icon">
-                <i class="fas fa-hand-sparkles"></i>
-            </div>
-
-            <h3>Hand Sanitizer Device</h3>
-
-            <div class="meta">
-                ATmega32 · PCB · Control
-            </div>
-
-            <p>
-                Microcontroller-based control board developed for an
-                automatic hand sanitizer system.
-            </p>
-
-            <ul>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    ATmega32 control system
-                </li>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    Electronic control circuitry
-                </li>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    PCB development
-                </li>
-
-            </ul>
-
-            <div class="tags">
-
-                <span>ATmega32</span>
-                <span>PCB</span>
-                <span>Control</span>
-
-            </div>
-
-        </div>
-
-
-        <!-- HOME STEAMER -->
-
-        <div class="card project-card">
-
-            <div class="project-image">
-                <img
-                    src="IMG_0876.jpeg"
-                    alt="Home Steamer Control Board"
-                />
-            </div>
-
-            <div class="icon">
-                <i class="fas fa-temperature-high"></i>
-            </div>
-
-            <h3>Home Steamer Control Board</h3>
-
-            <div class="meta">
-                Hardware · Control Electronics
-            </div>
-
-            <p>
-                Electronic control board developed for a home steamer
-                device with focus on reliable hardware operation.
-            </p>
-
-            <ul>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    Electronic control
-                </li>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    PCB design
-                </li>
-
-                <li>
-                    <i class="fas fa-check"></i>
-                    Hardware development
-                </li>
-
-            </ul>
-
-            <div class="tags">
-
-                <span>PCB</span>
-                <span>Control</span>
-                <span>Hardware</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- ================= EXPERIENCE ================= -->
-
-    <h2 class="section-title">
-        Professional Experience
-    </h2>
-
-    <div class="grid">
-
-        <div class="card">
-
-            <div class="icon">
-                <i class="fas fa-building"></i>
-            </div>
-
-            <h3>Electronics Expert</h3>
-
-            <div class="meta">
-                Tosan Techno · 2024–2025
-            </div>
-
-            <p>
-                Worked on electronics hardware, troubleshooting,
-                development and technical implementation of electronic systems.
-            </p>
-
-            <div class="tags">
-
-                <span>Electronics</span>
-                <span>Hardware</span>
-                <span>R&D</span>
-
-            </div>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">
-                <i class="fas fa-robot"></i>
-            </div>
-
-            <h3>Robotics Hardware</h3>
-
-            <div class="meta">
-                MRL@Work · 2016–2020
-            </div>
-
-            <p>
-                Four years of hands-on robotics experience focused on
-                hardware development, motor control and electronic systems.
-            </p>
-
-            <div class="tags">
-
-                <span>Robotics</span>
-                <span>Hardware</span>
-                <span>Motor Control</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- ================= ROBOTICS ================= -->
-
-    <h2 class="section-title">
-        Robotics Experience
-    </h2>
-
-    <div class="robotics-card">
-
-        <div class="robotics-image">
-
-            <img
-                src="IMG_5063.jpeg"
-                alt="Robotics Project"
-            />
-
-        </div>
-
-        <div class="robotics-content">
-
-            <div class="icon">
-                <i class="fas fa-robot"></i>
-            </div>
-
-            <h3>
-                Four Years of Hands-on Robotics Development
-            </h3>
-
-            <div class="meta">
-                MRL@Work Robotics Team
-            </div>
-
-            <p>
-                Four years of experience working with robotics systems,
-                electronic hardware, motor drivers and embedded control.
-                This experience shaped my interest in developing complete
-                hardware systems rather than isolated circuits.
-            </p>
-
-            <div class="robotics-stats">
-
-                <div>
-                    <strong>4+</strong>
-                    <span>YEARS</span>
+                <div class="profile-image-wrap">
+                    <img src="IMG_9217.jpeg"
+                         alt="Parniyan Ghaleei">
                 </div>
 
-                <div>
-                    <strong>HW</strong>
-                    <span>HARDWARE</span>
+                <div class="profile-info">
+                    <div>
+                        <strong>Parniyan Ghaleei</strong>
+                        <span>Electronics Engineer</span>
+                    </div>
+
+                    <div class="profile-arrow">
+                        ↗
+                    </div>
                 </div>
 
-                <div>
-                    <strong>R&D</strong>
-                    <span>DEVELOPMENT</span>
+            </div>
+
+            <div class="floating-card fc-one">
+                <span>PCB</span>
+                <strong>Design</strong>
+            </div>
+
+            <div class="floating-card fc-two">
+                <span>MCU</span>
+                <strong>STM32 / AVR</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO / ABOUT ================= -->
+
+<section class="section" id="about">
+
+    <div class="container">
+
+        <div class="section-label">
+            01 — ABOUT
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-title">
+                <h2>
+                    Turning ideas into
+                    <span>working hardware.</span>
+                </h2>
+            </div>
+
+            <div class="about-content">
+
+                <p class="large-text">
+                    I'm an Electronics & Embedded Systems Engineer
+                    with hands-on experience in PCB design, embedded
+                    systems, motor control and robotics hardware.
+                </p>
+
+                <p>
+                    My work combines circuit design, PCB development,
+                    microcontroller programming and hardware testing.
+                    I enjoy taking an idea from schematic and component
+                    selection all the way to a working prototype.
+                </p>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <strong>4+</strong>
+                        <span>Years Robotics Experience</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>10+</strong>
+                        <span>Hardware Projects</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>PCB</strong>
+                        <span>Design & Development</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -645,139 +194,748 @@
 
     </div>
 
+</section>
 
-    <!-- ================= TEAM ================= -->
 
-    <h2 class="section-title">
-        Robotics Team
-    </h2>
+<!-- ================= SKILLS ================= -->
 
-    <div class="team-grid">
+<section class="section skills-section">
 
-        <div class="team-card">
-            <img
-                src="IMG_1690.jpeg"
-                alt="MRL Robotics Team"
-            />
+    <div class="container">
+
+        <div class="section-label">
+            02 — EXPERTISE
         </div>
 
-        <div class="team-card">
-            <img
-                src="IMG_1688.jpeg"
-                alt="MRL Robotics Team"
-            />
+        <div class="section-heading">
+            <h2>Technical Skills</h2>
+            <p>
+                Hardware, embedded systems and engineering tools I work with.
+            </p>
         </div>
 
-        <div class="team-card">
-            <img
-                src="IMG_1683.jpeg"
-                alt="Parniyan with robotics project"
-            />
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-number">01</div>
+                <h3>PCB Design</h3>
+                <p>
+                    Schematic design, PCB layout, routing,
+                    multilayer boards, footprints and BOM.
+                </p>
+                <div class="skill-tags">
+                    <span>Altium Designer</span>
+                    <span>PCB Layout</span>
+                    <span>BOM</span>
+                </div>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-number">02</div>
+                <h3>Embedded Systems</h3>
+                <p>
+                    Microcontroller-based hardware development
+                    and firmware integration.
+                </p>
+                <div class="skill-tags">
+                    <span>STM32</span>
+                    <span>AVR</span>
+                    <span>C / C++</span>
+                </div>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-number">03</div>
+                <h3>Communication</h3>
+                <p>
+                    Hardware communication and peripheral
+                    integration for embedded systems.
+                </p>
+                <div class="skill-tags">
+                    <span>UART</span>
+                    <span>SPI</span>
+                    <span>I²C</span>
+                </div>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-number">04</div>
+                <h3>Electronics & Control</h3>
+                <p>
+                    Motor drivers, power electronics, sensors,
+                    ADC, PWM and control circuits.
+                </p>
+                <div class="skill-tags">
+                    <span>Motor Control</span>
+                    <span>ADC / PWM</span>
+                    <span>Drivers</span>
+                </div>
+            </div>
+
         </div>
 
     </div>
 
+</section>
 
-    <!-- ================= EDUCATION ================= -->
 
-    <h2 class="section-title">
-        Education
-    </h2>
+<!-- ================= EXPERIENCE ================= -->
 
-    <div class="grid">
+<section class="section" id="experience">
 
-        <div class="card">
+    <div class="container">
 
-            <div class="icon">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
+        <div class="section-label">
+            03 — EXPERIENCE
+        </div>
 
-            <h3>
-                B.Sc. Biomedical Engineering
-            </h3>
-
-            <div class="meta">
-                Qazvin Islamic Azad University · 2016–2020
-            </div>
-
+        <div class="section-heading">
+            <h2>Career Journey</h2>
             <p>
-                Undergraduate background in biomedical engineering,
-                followed by hands-on experience in robotics and electronics.
+                Engineering experience across robotics and electronics.
             </p>
-
         </div>
 
 
-        <div class="card">
+        <div class="timeline">
 
-            <div class="icon">
-                <i class="fas fa-graduation-cap"></i>
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2016 — 2020
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span class="timeline-company">
+                        MRL Robotics Team · QIAU
+                    </span>
+
+                    <h3>
+                        Robotics Hardware & Motor Driver Designer
+                    </h3>
+
+                    <p>
+                        Designed and developed motor driver circuits
+                        for robotic platforms, including single,
+                        dual and four-channel boards. Worked on
+                        circuit design, PCB development, testing,
+                        debugging and robotic system integration.
+                    </p>
+
+                </div>
+
             </div>
 
-            <h3>
-                M.Sc. Electrical Engineering
-            </h3>
 
-            <div class="meta">
-                Telecommunication Systems
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2024 — 2025
+                </div>
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <span class="timeline-company">
+                        Tosan Techno
+                    </span>
+
+                    <h3>
+                        Electronics Expert
+                    </h3>
+
+                    <p>
+                        Worked on electronics hardware and
+                        troubleshooting, with practical experience
+                        in electronic systems, boards and hardware
+                        diagnostics.
+                    </p>
+
+                </div>
+
             </div>
-
-            <p>
-                Graduate studies in electrical engineering with a focus
-                aligned with electronics, embedded systems and advanced
-                engineering development.
-            </p>
 
         </div>
 
     </div>
 
+</section>
 
-    <!-- ================= ACADEMIC GOAL ================= -->
 
-    <section>
+<!-- ================= EDUCATION ================= -->
 
-        <h2 class="section-title">
-            Academic & Career Goal
-        </h2>
+<section class="section education-section">
 
-        <div class="goal-card">
+    <div class="container">
 
-            <div class="icon">
-                <i class="fas fa-bullseye"></i>
+        <div class="section-label">
+            04 — EDUCATION
+        </div>
+
+        <div class="education-grid">
+
+            <div>
+                <h2>Academic Background</h2>
+                <p>
+                    My academic path combines biomedical engineering
+                    with electrical engineering and embedded systems.
+                </p>
             </div>
 
-            <h3>
-                Growing Toward Advanced Electronics & R&D
-            </h3>
+            <div class="education-list">
 
-            <div class="sub">
-                Electronics · Embedded Systems · Robotics · Research & Development
+                <div class="education-card">
+
+                    <span class="edu-year">
+                        2024 — Present
+                    </span>
+
+                    <div>
+                        <h3>
+                            M.Sc. Electrical Engineering
+                        </h3>
+
+                        <p>
+                            Telecommunication Systems
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <span class="edu-year">
+                        2016 — 2020
+                    </span>
+
+                    <div>
+                        <h3>
+                            B.Sc. Biomedical Engineering
+                        </h3>
+
+                        <p>
+                            Qazvin Islamic Azad University
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="section projects-section" id="projects">
+
+    <div class="container">
+
+        <div class="section-label">
+            05 — SELECTED WORK
+        </div>
+
+        <div class="section-heading projects-heading">
+            <div>
+                <h2>Featured Projects</h2>
             </div>
 
             <p>
-                My goal is to continue developing as an electronics and
-                embedded systems engineer while working on challenging
-                hardware projects, intelligent systems and research-driven
-                engineering problems.
+                Selected electronics and embedded projects
+                developed through hands-on engineering work.
             </p>
+        </div>
 
-            <div class="tags">
 
-                <span class="primary">
-                    Advanced Electronics
+        <!-- FEATURED PROJECT -->
+
+        <article class="featured-project">
+
+            <div class="featured-image">
+
+                <img src="IMG_0886.jpeg"
+                     alt="Motor Driver PCB">
+
+                <div class="image-label">
+                    PCB / MOTOR CONTROL
+                </div>
+
+            </div>
+
+            <div class="featured-info">
+
+                <span class="project-index">
+                    PROJECT 01
                 </span>
 
-                <span class="primary">
-                    Embedded Systems
+                <h3>
+                    Single, Dual & Four-Channel
+                    Motor Drivers
+                </h3>
+
+                <p>
+                    Designed motor driver boards for robotic and
+                    embedded applications, covering circuit design,
+                    PCB layout, component selection, routing,
+                    testing and hardware debugging.
+                </p>
+
+                <div class="project-tags">
+                    <span>Altium</span>
+                    <span>PCB Design</span>
+                    <span>Motor Driver</span>
+                    <span>Robotics</span>
+                </div>
+
+                <div class="mini-gallery">
+
+                    <img src="IMG_0883.jpeg"
+                         alt="Motor Driver PCB">
+
+                    <img src="IMG_0884.jpeg"
+                         alt="Motor Driver PCB">
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT GRID -->
+
+        <div class="project-grid">
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="IMG_0878.jpeg"
+                         alt="Hand Sanitizer Device">
+
+                    <span>02</span>
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        EMBEDDED CONTROL
+                    </span>
+
+                    <h3>
+                        Hand Sanitizer Device
+                    </h3>
+
+                    <p>
+                        Electronic control board based on an AVR
+                        microcontroller with motor control circuitry,
+                        hardware testing and debugging.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>AVR</span>
+                        <span>Motor Control</span>
+                        <span>PCB</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="IMG_0876.jpeg"
+                         alt="Home Steamer Control Board">
+
+                    <span>03</span>
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        CONTROL BOARD
+                    </span>
+
+                    <h3>
+                        Home Steamer Control Board
+                    </h3>
+
+                    <p>
+                        Main electronic control board for a home
+                        steam-generation device with microcontroller-
+                        based control and hardware testing.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Microcontroller</span>
+                        <span>Control</span>
+                        <span>Hardware</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="IMG_1691.jpeg"
+                         alt="COVID-19 Disinfection Robot">
+
+                    <span>04</span>
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        ROBOTICS
+                    </span>
+
+                    <h3>
+                        COVID-19 Disinfection Robot
+                    </h3>
+
+                    <p>
+                        Electronic adaptation and integration of
+                        a robotic platform for environmental
+                        disinfection applications.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Robotics</span>
+                        <span>Hardware</span>
+                        <span>Integration</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="project-card">
+
+                <div class="project-image">
+                    <img src="IMG_1694.jpeg"
+                         alt="Robotics Project">
+
+                    <span>05</span>
+                </div>
+
+                <div class="project-body">
+
+                    <span class="project-type">
+                        ROBOTICS R&D
+                    </span>
+
+                    <h3>
+                        Robotic Platform Development
+                    </h3>
+
+                    <p>
+                        Hands-on robotics development through MRL@Work,
+                        focusing on electronics, motor control and
+                        hardware-system integration.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>R&D</span>
+                        <span>Robotics</span>
+                        <span>Electronics</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ROBOTICS ================= -->
+
+<section class="section robotics-section" id="robotics">
+
+    <div class="container">
+
+        <div class="section-label">
+            06 — ROBOTICS
+        </div>
+
+        <div class="robotics-grid">
+
+            <div class="robotics-images">
+
+                <div class="robot-main">
+                    <img src="IMG_5063.jpeg"
+                         alt="MRL Robotics Platform">
+                </div>
+
+                <div class="robot-secondary">
+                    <img src="IMG_1683.jpeg"
+                         alt="Parniyan Ghaleei with robot">
+                </div>
+
+            </div>
+
+
+            <div class="robotics-content">
+
+                <span class="project-type">
+                    MRL@WORK
                 </span>
 
-                <span class="primary">
-                    PCB Design
+                <h2>
+                    Four years of
+                    <span>robotics development.</span>
+                </h2>
+
+                <p>
+                    As a member of the MRL@Work robotics team,
+                    I worked on the electronics and hardware side
+                    of autonomous robotic platforms.
+                </p>
+
+                <p>
+                    My responsibilities included motor driver
+                    development, PCB design, circuit testing,
+                    debugging and hardware integration.
+                </p>
+
+
+                <div class="achievement">
+
+                    <div class="achievement-icon">
+                        01
+                    </div>
+
+                    <div>
+                        <strong>
+                            1st Place — RoboCup Asia-Pacific 2018
+                        </strong>
+
+                        <span>
+                            MRL@Work · Qazvin Islamic Azad University
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="achievement">
+
+                    <div class="achievement-icon">
+                        02
+                    </div>
+
+                    <div>
+                        <strong>
+                            RoboCup 2019 Participant
+                        </strong>
+
+                        <span>
+                            RoboCup@Work League · Sydney
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TEAM ================= -->
+
+<section class="section team-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            07 — TEAM
+        </div>
+
+        <div class="section-heading">
+            <h2>Engineering is a team sport.</h2>
+            <p>
+                Building complex systems means working together.
+            </p>
+        </div>
+
+        <div class="team-gallery">
+
+            <div>
+                <img src="IMG_1690.jpeg"
+                     alt="MRL Robotics Team">
+            </div>
+
+            <div>
+                <img src="IMG_1688.jpeg"
+                     alt="MRL Robotics Team">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section class="section certificates-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            08 — CERTIFICATES
+        </div>
+
+        <div class="section-heading">
+            <h2>Certificates & Recognition</h2>
+            <p>
+                Certificates and additional achievements will be added here.
+            </p>
+        </div>
+
+        <div class="certificate-grid">
+
+            <div class="certificate-placeholder">
+                <span>+</span>
+                <strong>Certificate</strong>
+                <small>Coming soon</small>
+            </div>
+
+            <div class="certificate-placeholder">
+                <span>+</span>
+                <strong>Certificate</strong>
+                <small>Coming soon</small>
+            </div>
+
+            <div class="certificate-placeholder">
+                <span>+</span>
+                <strong>Certificate</strong>
+                <small>Coming soon</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div>
+
+                <span class="section-label">
+                    09 — CONTACT
                 </span>
 
-                <span class="primary">
-                    Robotics
-                </span>
+                <h2>
+                    Let's build something
+                    <span>real.</span>
+                </h2>
 
-               
+                <p>
+                    I'm open to engineering opportunities,
+                    embedded systems projects and R&D collaborations.
+                </p>
+
+            </div>
+
+            <div class="contact-actions">
+
+                <a href="mailto:Ghaleeiparniyan@gmail.com"
+                   class="contact-email">
+                    Ghaleeiparniyan@gmail.com
+                    <span>↗</span>
+                </a>
+
+                <a href="https://github.com/Parniyanghaleei"
+                   target="_blank"
+                   class="github-link">
+                    GitHub Profile
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+            <strong>Parniyan Ghaleei</strong>
+            <span>
+                Electronics & Embedded Systems Engineer
+            </span>
+        </div>
+
+        <div class="footer-links">
+
+            <a href="mailto:Ghaleeiparniyan@gmail.com">
+                Email
+            </a>
+
+            <a href="https://github.com/Parniyanghaleei"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a href="#home">
+                Back to top ↑
+            </a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Parniyan Ghaleei
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
