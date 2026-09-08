@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
+
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root {
-    --bg: #0b0d0f;
+    --bg: #0a0c0e;
     --surface: #111417;
-    --text: #f3f4f2;
-    --muted: #92989a;
+    --surface-light: #171b1f;
+
+    --text: #f4f5f3;
+    --muted: #8f9699;
+
     --line: #292e32;
+
     --accent: #c8ff3d;
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     margin: 0;
@@ -22,8 +36,11 @@ html {
 body {
     background: var(--bg);
     color: var(--text);
+
     font-family: "DM Sans", sans-serif;
+
     line-height: 1.6;
+
     overflow-x: hidden;
 }
 
@@ -43,46 +60,65 @@ img {
 }
 
 
-/* ================= NAVBAR ================= */
+/* =========================================================
+   NAVBAR
+========================================================= */
 
 .navbar {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1000;
 
-    background: rgba(11, 13, 15, 0.85);
-    backdrop-filter: blur(18px);
+    background: rgba(10, 12, 14, 0.82);
+
+    backdrop-filter: blur(20px);
 
     border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav-inner {
-    max-width: 1300px;
+    max-width: 1320px;
+
     margin: auto;
-    padding: 20px 35px;
+
+    padding: 21px 40px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
 .logo {
     font-family: "Space Grotesk", sans-serif;
+
     font-size: 24px;
+
     font-weight: 700;
+
+    letter-spacing: -1px;
 }
 
 nav {
     display: flex;
+
+    align-items: center;
+
     gap: 30px;
 }
 
 nav a {
-    font-size: 13px;
+    font-size: 12px;
+
     color: #aeb3b5;
-    transition: 0.3s;
+
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -90,109 +126,129 @@ nav a:hover {
 }
 
 
-/* ================= GENERAL ================= */
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
 
 .section {
-    max-width: 1300px;
+    max-width: 1320px;
+
     margin: auto;
-    padding: 150px 35px;
+
+    padding: 145px 40px;
 }
 
 .eyebrow {
-    font-size: 11px;
+    font-size: 10px;
+
     font-weight: 600;
+
     letter-spacing: 4px;
+
     color: var(--accent);
+
     text-transform: uppercase;
 }
 
 .section-heading {
-    margin-bottom: 70px;
+    margin-bottom: 75px;
 }
 
 .section-heading h2 {
     margin-top: 15px;
 
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(60px, 9vw, 125px);
+
+    font-size: clamp(65px, 8vw, 120px);
 
     line-height: 0.85;
+
     letter-spacing: -6px;
 }
 
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
     min-height: 100vh;
-    max-width: 1300px;
+
+    max-width: 1320px;
+
     margin: auto;
 
-    padding: 150px 35px 80px;
+    padding: 150px 40px 90px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns: 1fr 0.92fr;
 
     align-items: center;
 
-    gap: 70px;
+    gap: 90px;
 
     position: relative;
 }
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 }
 
 .hero h1 {
-    margin-top: 25px;
+    margin-top: 24px;
 
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: clamp(75px, 10vw, 150px);
+    font-size: clamp(80px, 10vw, 150px);
 
-    line-height: 0.78;
+    line-height: 0.77;
 
     letter-spacing: -9px;
 }
 
 .hero h1 span {
     color: var(--accent);
+
     font-weight: 400;
 }
 
 .hero-title {
-    margin-top: 40px;
+    margin-top: 42px;
 
-    font-size: 21px;
+    font-size: 20px;
+
     font-weight: 600;
 }
 
 .hero-description {
-    max-width: 540px;
+    max-width: 520px;
 
     margin-top: 18px;
 
     color: var(--muted);
 
-    font-size: 16px;
+    font-size: 15px;
+
+    line-height: 1.8;
 }
 
 .hero-button {
     display: inline-flex;
 
-    margin-top: 35px;
+    margin-top: 34px;
 
-    padding: 15px 23px;
+    padding: 14px 22px;
 
     border: 1px solid var(--line);
 
-    border-radius: 100px;
+    border-radius: 999px;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    transition: 0.35s;
+    transition: all 0.3s ease;
 }
 
 .hero-button:hover {
@@ -206,12 +262,22 @@ nav a:hover {
 }
 
 
-/* ================= HERO IMAGE ================= */
+/* =========================================================
+   HERO IMAGE
+========================================================= */
 
 .hero-visual {
-    height: 600px;
-
     position: relative;
+
+    width: 100%;
+
+    height: 620px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 
     overflow: hidden;
 
@@ -222,71 +288,100 @@ nav a:hover {
 
 .hero-image {
     width: 100%;
+
     height: 100%;
 
     object-fit: contain;
 
-    padding: 15px;
+    padding: 18px;
+
+    transition: transform 0.7s ease;
+}
+
+.hero-visual:hover .hero-image {
+    transform: scale(1.025);
 }
 
 .hero-image-label {
     position: absolute;
 
-    bottom: 20px;
     left: 20px;
+
+    bottom: 20px;
 
     padding: 8px 12px;
 
-    background: rgba(11,13,15,0.8);
+    background: rgba(10,12,14,0.85);
 
     border: 1px solid var(--line);
 
-    color: #d5d9da;
+    color: #d6dada;
 
-    font-size: 9px;
+    font-size: 8px;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
 }
 
 
-/* ================= PROJECTS ================= */
+/* =========================================================
+   PROJECTS
+========================================================= */
 
 .project-grid {
     display: grid;
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 100px 35px;
+    column-gap: 55px;
+
+    row-gap: 125px;
 }
 
 .project-card {
     min-width: 0;
 
+    position: relative;
+
     transition: transform 0.4s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-6px);
 }
+
+
+/*
+   عمداً stagger خیلی زیاد نداریم.
+   پروژه‌ها باید مرتب و حرفه‌ای دیده شوند.
+*/
 
 .project-card:nth-child(2),
 .project-card:nth-child(4) {
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 
-/* ================= PROJECT GALLERY ================= */
+/* =========================================================
+   PROJECT GALLERY
+========================================================= */
 
 .project-gallery {
     width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
 }
 
 
-/* MAIN IMAGE */
+/* =========================================================
+   MAIN PROJECT IMAGE
+========================================================= */
 
 .project-main-image {
     width: 100%;
-    height: 450px;
 
     overflow: hidden;
 
@@ -295,19 +390,22 @@ nav a:hover {
     background: var(--surface);
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 }
 
 .project-main-image img {
     width: 100%;
-    height: 100%;
+
+    height: auto;
 
     object-fit: contain;
 
     padding: 12px;
 
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
 }
 
 .project-main-image:hover img {
@@ -315,63 +413,71 @@ nav a:hover {
 }
 
 
-/* THUMBNAILS */
+/* =========================================================
+   PROJECT THUMBNAILS
+========================================================= */
 
 .project-thumbnails {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 10px;
-
-    margin-top: 10px;
+    gap: 12px;
 }
 
 .project-thumbnails img {
     width: 100%;
-    height: 170px;
+
+    height: auto;
 
     object-fit: contain;
 
-    padding: 6px;
+    padding: 8px;
 
     background: var(--surface);
 
     border: 1px solid var(--line);
 
-    transition: 0.35s ease;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
 }
 
 .project-thumbnails img:hover {
-    border-color: var(--accent);
+    transform: translateY(-4px);
 
-    transform: translateY(-3px);
+    border-color: var(--accent);
 }
 
 
-/* ================= PROJECT INFO ================= */
+/* =========================================================
+   PROJECT INFORMATION
+========================================================= */
 
 .project-info {
-    padding: 25px 5px 0 50px;
-
     position: relative;
+
+    padding: 27px 5px 0 52px;
 }
 
 .project-number {
     position: absolute;
 
     left: 5px;
-    top: 30px;
+
+    top: 32px;
 
     color: var(--accent);
 
-    font-size: 11px;
+    font-size: 10px;
+
+    letter-spacing: 1px;
 }
 
 .project-info h3 {
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: clamp(27px, 3vw, 42px);
+    font-size: clamp(27px, 3vw, 40px);
 
     line-height: 1;
 
@@ -381,48 +487,52 @@ nav a:hover {
 }
 
 .project-info p {
+    max-width: 500px;
+
     color: var(--muted);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    max-width: 500px;
+    line-height: 1.7;
 }
 
 .project-tag {
     display: inline-block;
 
-    margin-top: 20px;
+    margin-top: 19px;
 
-    padding: 6px 10px;
+    padding: 6px 11px;
 
     border: 1px solid var(--line);
 
-    border-radius: 100px;
+    border-radius: 999px;
 
-    font-size: 9px;
+    color: #909698;
+
+    font-size: 8px;
 
     letter-spacing: 2px;
-
-    color: #8b9193;
 
     text-transform: uppercase;
 }
 
 
-/* ================= ABOUT ================= */
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about-content {
     display: grid;
 
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 0.78fr 1.22fr;
 
-    gap: 90px;
+    gap: 95px;
 
     align-items: center;
 }
 
 .about-image {
-    height: 600px;
+    width: 100%;
 
     overflow: hidden;
 
@@ -433,17 +543,24 @@ nav a:hover {
 
 .about-image img {
     width: 100%;
-    height: 100%;
+
+    height: auto;
 
     object-fit: contain;
 
     padding: 12px;
+
+    transition: transform 0.6s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.02);
 }
 
 .large-text {
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: clamp(32px, 4vw, 55px);
+    font-size: clamp(34px, 4vw, 55px);
 
     line-height: 1.05;
 
@@ -453,15 +570,21 @@ nav a:hover {
 }
 
 .about-text > p:not(.large-text) {
-    color: var(--muted);
-
     max-width: 650px;
 
     margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 1.8;
 }
 
 
-/* ================= SKILLS ================= */
+/* =========================================================
+   SKILLS
+========================================================= */
 
 .skills {
     display: flex;
@@ -474,27 +597,29 @@ nav a:hover {
 }
 
 .skills span {
-    padding: 9px 13px;
+    padding: 8px 12px;
 
     border: 1px solid var(--line);
 
-    border-radius: 100px;
+    border-radius: 999px;
 
-    font-size: 11px;
+    color: #999fa1;
 
-    color: #9ba0a2;
+    font-size: 10px;
 
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .skills span:hover {
-    border-color: var(--accent);
-
     color: var(--accent);
+
+    border-color: var(--accent);
 }
 
 
-/* ================= EXPERIENCE ================= */
+/* =========================================================
+   EXPERIENCE
+========================================================= */
 
 .timeline {
     border-top: 1px solid var(--line);
@@ -503,9 +628,9 @@ nav a:hover {
 .timeline-item {
     display: grid;
 
-    grid-template-columns: 230px 1fr;
+    grid-template-columns: 220px 1fr;
 
-    gap: 50px;
+    gap: 60px;
 
     padding: 55px 0;
 
@@ -513,40 +638,49 @@ nav a:hover {
 }
 
 .timeline-year {
-    font-size: 12px;
-
     color: var(--accent);
+
+    font-size: 11px;
 }
 
 .timeline-item h3 {
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: 32px;
+    font-size: 31px;
+
+    line-height: 1.1;
 
     letter-spacing: -1px;
 
-    margin-bottom: 5px;
+    margin-bottom: 7px;
 }
 
 .company {
-    color: #d2d5d6 !important;
+    color: #d5d8d9 !important;
 
     font-weight: 600;
 
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 }
 
 .timeline-item p:last-child {
+    max-width: 650px;
+
     color: var(--muted);
+
+    font-size: 14px;
 }
 
 
-/* ================= ROBOTICS ================= */
+/* =========================================================
+   ROBOTICS
+========================================================= */
 
 .achievement {
     max-width: 1400px;
 
     padding-left: 0;
+
     padding-right: 0;
 
     display: grid;
@@ -559,22 +693,35 @@ nav a:hover {
 }
 
 .achievement-image {
-    height: 650px;
+    min-height: 650px;
 
     overflow: hidden;
 
+    background: var(--surface);
+
     border-right: 1px solid var(--line);
 
-    background: var(--surface);
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
 .achievement-image img {
     width: 100%;
+
     height: 100%;
 
     object-fit: contain;
 
-    padding: 15px;
+    padding: 25px;
+
+    transition: transform 0.6s ease;
+}
+
+.achievement-image:hover img {
+    transform: scale(1.025);
 }
 
 .achievement-content {
@@ -588,37 +735,41 @@ nav a:hover {
 }
 
 .achievement-content h2 {
+    margin-top: 20px;
+
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: clamp(75px, 10vw, 150px);
+    font-size: clamp(75px, 9vw, 145px);
 
     line-height: 0.8;
 
     letter-spacing: -8px;
 
-    margin-top: 20px;
-
     color: var(--accent);
 }
 
 .achievement-title {
+    margin-top: 35px;
+
     font-family: "Space Grotesk", sans-serif;
 
     font-size: 25px;
-
-    margin-top: 35px;
 }
 
 .achievement-content > p:last-child {
-    color: var(--muted);
+    max-width: 500px;
 
     margin-top: 15px;
 
-    max-width: 500px;
+    color: var(--muted);
+
+    font-size: 14px;
 }
 
 
-/* ================= TEAM ================= */
+/* =========================================================
+   TEAM
+========================================================= */
 
 .team-grid {
     display: grid;
@@ -629,24 +780,29 @@ nav a:hover {
 }
 
 .team-image {
-    height: 500px;
-
     overflow: hidden;
 
     border: 1px solid var(--line);
 
     background: var(--surface);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
 
 .team-image img {
     width: 100%;
-    height: 100%;
+
+    height: auto;
 
     object-fit: contain;
 
     padding: 10px;
 
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
 }
 
 .team-image:hover img {
@@ -654,66 +810,73 @@ nav a:hover {
 }
 
 
-/* ================= CERTIFICATES ================= */
+/* =========================================================
+   CERTIFICATES
+========================================================= */
 
 .certificate-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
     gap: 20px;
 }
 
 .certificate-card {
+    overflow: hidden;
+
     border: 1px solid var(--line);
 
     background: var(--surface);
-
-    overflow: hidden;
 }
 
 .certificate-placeholder {
-    height: 360px;
+    min-height: 350px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    color: #606669;
+    color: #5f6568;
 
-    font-size: 10px;
+    font-size: 9px;
 
     letter-spacing: 3px;
 }
 
 
-/* ================= CONTACT ================= */
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact {
     text-align: center;
 
-    padding-top: 200px;
+    padding-top: 190px;
 
-    padding-bottom: 200px;
+    padding-bottom: 190px;
 }
 
 .contact h2 {
+    margin-top: 25px;
+
     font-family: "Space Grotesk", sans-serif;
 
-    font-size: clamp(65px, 10vw, 145px);
+    font-size: clamp(65px, 9vw, 140px);
 
     line-height: 0.82;
 
     letter-spacing: -7px;
-
-    margin-top: 25px;
 }
 
 .contact > p:not(.eyebrow) {
+    margin-top: 30px;
+
     color: var(--muted);
 
-    margin-top: 30px;
+    font-size: 14px;
 }
 
 .contact-links {
@@ -721,7 +884,7 @@ nav a:hover {
 
     justify-content: center;
 
-    gap: 30px;
+    gap: 35px;
 
     margin-top: 45px;
 }
@@ -731,9 +894,9 @@ nav a:hover {
 
     border-bottom: 1px solid var(--accent);
 
-    font-size: 13px;
+    font-size: 12px;
 
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .contact-links a:hover {
@@ -741,26 +904,32 @@ nav a:hover {
 }
 
 
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
-    max-width: 1300px;
+    max-width: 1320px;
 
     margin: auto;
 
-    padding: 30px 35px;
+    padding: 30px 40px;
 
     border-top: 1px solid var(--line);
 
     color: #606669;
 
-    font-size: 11px;
+    font-size: 10px;
 }
 
 
-/* ================= MOBILE ================= */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 800px) {
+
+    /* NAV */
 
     .nav-inner {
         padding: 18px 20px;
@@ -771,17 +940,18 @@ footer {
     }
 
 
+    /* SECTIONS */
+
     .section {
         padding: 100px 20px;
     }
-
 
     .section-heading {
         margin-bottom: 50px;
     }
 
     .section-heading h2 {
-        font-size: 65px;
+        font-size: 64px;
 
         letter-spacing: -4px;
     }
@@ -790,9 +960,11 @@ footer {
     /* HERO */
 
     .hero {
+        min-height: auto;
+
         grid-template-columns: 1fr;
 
-        padding: 130px 20px 70px;
+        padding: 125px 20px 70px;
 
         gap: 50px;
     }
@@ -803,8 +975,28 @@ footer {
         letter-spacing: -5px;
     }
 
+    .hero-title {
+        margin-top: 35px;
+
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
     .hero-visual {
-        height: 430px;
+        height: auto;
+
+        min-height: 400px;
+    }
+
+    .hero-image {
+        height: auto;
+
+        max-height: 500px;
+
+        padding: 10px;
     }
 
 
@@ -813,7 +1005,7 @@ footer {
     .project-grid {
         grid-template-columns: 1fr;
 
-        gap: 75px;
+        row-gap: 80px;
     }
 
     .project-card:nth-child(2),
@@ -822,22 +1014,33 @@ footer {
     }
 
 
-    .project-main-image {
-        height: 330px;
+    /* PROJECT GALLERY */
+
+    .project-gallery {
+        gap: 8px;
+    }
+
+    .project-main-image img {
+        padding: 7px;
     }
 
     .project-thumbnails {
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 7px;
-
-        margin-top: 7px;
+        gap: 8px;
     }
 
     .project-thumbnails img {
-        height: 130px;
+        padding: 5px;
+    }
 
-        padding: 4px;
+
+    /* PROJECT INFO */
+
+    .project-info {
+        padding: 23px 5px 0 45px;
+    }
+
+    .project-info h3 {
+        font-size: 30px;
     }
 
 
@@ -849,8 +1052,8 @@ footer {
         gap: 50px;
     }
 
-    .about-image {
-        height: 450px;
+    .about-image img {
+        padding: 8px;
     }
 
 
@@ -859,7 +1062,7 @@ footer {
     .timeline-item {
         grid-template-columns: 1fr;
 
-        gap: 15px;
+        gap: 14px;
 
         padding: 40px 0;
     }
@@ -876,11 +1079,15 @@ footer {
     }
 
     .achievement-image {
-        height: 400px;
+        min-height: 400px;
 
         border-right: none;
 
         border-bottom: 1px solid var(--line);
+    }
+
+    .achievement-image img {
+        padding: 15px;
     }
 
     .achievement-content {
@@ -888,7 +1095,7 @@ footer {
     }
 
     .achievement-content h2 {
-        font-size: 90px;
+        font-size: 85px;
 
         letter-spacing: -5px;
     }
@@ -902,10 +1109,6 @@ footer {
         gap: 15px;
     }
 
-    .team-image {
-        height: 380px;
-    }
-
 
     /* CERTIFICATES */
 
@@ -916,20 +1119,20 @@ footer {
     }
 
     .certificate-placeholder {
-        height: 300px;
+        min-height: 300px;
     }
 
 
     /* CONTACT */
 
     .contact {
-        padding-top: 130px;
+        padding-top: 120px;
 
-        padding-bottom: 130px;
+        padding-bottom: 120px;
     }
 
     .contact h2 {
-        font-size: 65px;
+        font-size: 63px;
 
         letter-spacing: -4px;
     }
@@ -938,11 +1141,14 @@ footer {
         flex-direction: column;
 
         align-items: center;
+
+        gap: 20px;
     }
 
+
+    /* FOOTER */
 
     footer {
         padding: 25px 20px;
     }
-
 }
