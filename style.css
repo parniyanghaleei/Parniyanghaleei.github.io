@@ -3,7 +3,6 @@
 :root {
     --bg: #0b0d0f;
     --surface: #111417;
-    --surface-2: #171b1f;
     --text: #f3f4f2;
     --muted: #92989a;
     --line: #292e32;
@@ -53,7 +52,7 @@ img {
     width: 100%;
     z-index: 1000;
 
-    background: rgba(11, 13, 15, 0.82);
+    background: rgba(11, 13, 15, 0.85);
     backdrop-filter: blur(18px);
 
     border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -73,7 +72,6 @@ img {
     font-family: "Space Grotesk", sans-serif;
     font-size: 24px;
     font-weight: 700;
-    letter-spacing: -1px;
 }
 
 nav {
@@ -84,7 +82,7 @@ nav {
 nav a {
     font-size: 13px;
     color: #aeb3b5;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 nav a:hover {
@@ -133,38 +131,18 @@ nav a:hover {
     padding: 150px 35px 80px;
 
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1fr 1fr;
+
     align-items: center;
 
     gap: 70px;
+
+    position: relative;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-}
-
-.hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    right: -180px;
-    top: 120px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(200,255,61,0.14),
-            transparent 65%
-        );
-
-    filter: blur(25px);
-
-    pointer-events: none;
 }
 
 .hero h1 {
@@ -209,15 +187,17 @@ nav a:hover {
     padding: 15px 23px;
 
     border: 1px solid var(--line);
+
     border-radius: 100px;
 
     font-size: 13px;
 
-    transition: 0.35s ease;
+    transition: 0.35s;
 }
 
 .hero-button:hover {
     background: var(--accent);
+
     border-color: var(--accent);
 
     color: #000;
@@ -244,15 +224,9 @@ nav a:hover {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    object-position: center;
-
-    transition: transform 0.7s ease;
-}
-
-.hero-visual:hover .hero-image {
-    transform: scale(1.04);
+    padding: 15px;
 }
 
 .hero-image-label {
@@ -263,11 +237,9 @@ nav a:hover {
 
     padding: 8px 12px;
 
-    background: rgba(11,13,15,0.75);
+    background: rgba(11,13,15,0.8);
 
-    backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--line);
 
     color: #d5d9da;
 
@@ -290,17 +262,12 @@ nav a:hover {
 .project-card {
     min-width: 0;
 
-    position: relative;
-
-    transition: transform 0.45s ease;
+    transition: transform 0.4s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
 }
-
-
-/* stagger */
 
 .project-card:nth-child(2),
 .project-card:nth-child(4) {
@@ -312,56 +279,73 @@ nav a:hover {
 
 .project-gallery {
     width: 100%;
-    height: 520px;
+}
 
-    display: grid;
 
-    grid-template-columns: 1.6fr 1fr;
+/* MAIN IMAGE */
 
-    grid-template-rows: 1fr 1fr;
-
-    gap: 8px;
+.project-main-image {
+    width: 100%;
+    height: 450px;
 
     overflow: hidden;
+
+    border: 1px solid var(--line);
+
+    background: var(--surface);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-main-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 12px;
+
+    transition: transform 0.5s ease;
+}
+
+.project-main-image:hover img {
+    transform: scale(1.025);
+}
+
+
+/* THUMBNAILS */
+
+.project-thumbnails {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+.project-thumbnails img {
+    width: 100%;
+    height: 170px;
+
+    object-fit: contain;
+
+    padding: 6px;
 
     background: var(--surface);
 
     border: 1px solid var(--line);
+
+    transition: 0.35s ease;
 }
 
+.project-thumbnails img:hover {
+    border-color: var(--accent);
 
-/* every image */
-
-.project-gallery img {
-    width: 100%;
-    height: 100%;
-
-    min-width: 0;
-    min-height: 0;
-
-    object-fit: cover;
-
-    background: #15191c;
-
-    transition:
-        transform 0.5s ease,
-        filter 0.5s ease;
-}
-
-
-/* first image = large */
-
-.project-gallery img:first-child {
-    grid-row: 1 / 3;
-}
-
-
-/* hover */
-
-.project-gallery img:hover {
-    transform: scale(1.035);
-
-    filter: brightness(1.08);
+    transform: translateY(-3px);
 }
 
 
@@ -451,15 +435,9 @@ nav a:hover {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    object-position: center;
-
-    transition: transform 0.6s ease;
-}
-
-.about-image:hover img {
-    transform: scale(1.03);
+    padding: 12px;
 }
 
 .large-text {
@@ -506,15 +484,13 @@ nav a:hover {
 
     color: #9ba0a2;
 
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .skills span:hover {
     border-color: var(--accent);
 
     color: var(--accent);
-
-    transform: translateY(-2px);
 }
 
 
@@ -596,15 +572,9 @@ nav a:hover {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    object-position: center;
-
-    transition: transform 0.7s ease;
-}
-
-.achievement-image:hover img {
-    transform: scale(1.04);
+    padding: 15px;
 }
 
 .achievement-content {
@@ -659,7 +629,7 @@ nav a:hover {
 }
 
 .team-image {
-    height: 520px;
+    height: 500px;
 
     overflow: hidden;
 
@@ -672,13 +642,15 @@ nav a:hover {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    transition: transform 0.6s ease;
+    padding: 10px;
+
+    transition: transform 0.5s ease;
 }
 
 .team-image:hover img {
-    transform: scale(1.035);
+    transform: scale(1.02);
 }
 
 
@@ -687,15 +659,15 @@ nav a:hover {
 .certificate-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 20px;
 }
 
 .certificate-card {
-    background: var(--surface);
-
     border: 1px solid var(--line);
+
+    background: var(--surface);
 
     overflow: hidden;
 }
@@ -707,13 +679,6 @@ nav a:hover {
 
     align-items: center;
     justify-content: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #15191c,
-            #0d0f11
-        );
 
     color: #606669;
 
@@ -729,6 +694,7 @@ nav a:hover {
     text-align: center;
 
     padding-top: 200px;
+
     padding-bottom: 200px;
 }
 
@@ -767,7 +733,7 @@ nav a:hover {
 
     font-size: 13px;
 
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .contact-links a:hover {
@@ -796,8 +762,6 @@ footer {
 
 @media (max-width: 800px) {
 
-    /* NAV */
-
     .nav-inner {
         padding: 18px 20px;
     }
@@ -807,11 +771,10 @@ footer {
     }
 
 
-    /* GENERAL */
-
     .section {
         padding: 100px 20px;
     }
+
 
     .section-heading {
         margin-bottom: 50px;
@@ -859,39 +822,22 @@ footer {
     }
 
 
-    /* PROJECT GALLERY */
-
-    .project-gallery {
-        height: auto;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        grid-template-rows: 250px 180px;
-
-        gap: 6px;
+    .project-main-image {
+        height: 330px;
     }
 
-    .project-gallery img:first-child {
-        grid-column: 1 / 3;
+    .project-thumbnails {
+        grid-template-columns: repeat(2, 1fr);
 
-        grid-row: 1;
+        gap: 7px;
+
+        margin-top: 7px;
     }
 
-    .project-gallery img:not(:first-child) {
-        grid-row: 2;
-    }
+    .project-thumbnails img {
+        height: 130px;
 
-
-    /* PROJECT INFO */
-
-    .project-info {
-        padding-left: 45px;
-    }
-
-    .project-info h3 {
-        font-size: 30px;
+        padding: 4px;
     }
 
 
@@ -995,9 +941,8 @@ footer {
     }
 
 
-    /* FOOTER */
-
     footer {
         padding: 25px 20px;
     }
+
 }
