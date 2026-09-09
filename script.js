@@ -8,18 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", () => {
 
+        if (!navbar) return;
+
         if (window.scrollY > 30) {
+
             navbar.style.boxShadow =
                 "0 8px 30px rgba(0,0,0,.06)";
+
         } else {
+
             navbar.style.boxShadow = "none";
+
         }
 
     });
 
 
     /* =========================
-       REVEAL
+       SCROLL REVEAL
     ========================= */
 
     const elements = document.querySelectorAll(
@@ -30,8 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
         ".project-card, " +
         ".robot-image, " +
         ".achievement, " +
-        ".team-gallery img"
+        ".team-gallery img, " +
+        ".certificate-card"
     );
+
 
     const observer = new IntersectionObserver(
         entries => {
@@ -41,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (entry.isIntersecting) {
 
                     entry.target.style.opacity = "1";
+
                     entry.target.style.transform =
                         "translateY(0)";
 
@@ -60,7 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach(element => {
 
         element.style.opacity = "0";
-        element.style.transform = "translateY(30px)";
+
+        element.style.transform =
+            "translateY(30px)";
+
         element.style.transition =
             "opacity .7s ease, transform .7s ease";
 
@@ -100,5 +112,61 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
         });
+
+
+    /* =========================
+       SMOOTH ANCHORS
+    ========================= */
+
+    document.querySelectorAll('a[href^="#"]')
+        .forEach(anchor => {
+
+            anchor.addEventListener("click", function(event) {
+
+                const targetId =
+                    this.getAttribute("href");
+
+                if (!targetId || targetId === "#") {
+                    return;
+                }
+
+                const target =
+                    document.querySelector(targetId);
+
+                if (!target) return;
+
+                event.preventDefault();
+
+                const navbarHeight =
+                    navbar ? navbar.offsetHeight : 0;
+
+                const targetPosition =
+                    target.getBoundingClientRect().top +
+                    window.scrollY -
+                    navbarHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+
+            });
+
+        });
+
+
+    /* =========================
+       CURRENT YEAR
+    ========================= */
+
+    const footerText =
+        document.querySelector("footer p");
+
+    if (footerText) {
+
+        footerText.textContent =
+            `© ${new Date().getFullYear()} Parniyan Ghaleei`;
+
+    }
 
 });
