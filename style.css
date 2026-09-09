@@ -1,5 +1,5 @@
 /* =========================================================
-   PARNIYAN GHALEEI — UI/UX PORTFOLIO
+   PARNIYAN GHALEEI — PROFESSIONAL PORTFOLIO
    ========================================================= */
 
 :root {
@@ -12,7 +12,6 @@
     --lime: #d9ff45;
 
     --max: 1280px;
-    --radius: 3px;
 }
 
 
@@ -45,11 +44,6 @@ a {
     text-decoration: none;
 }
 
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
-}
-
 
 /* ================= NAVBAR ================= */
 
@@ -57,14 +51,17 @@ a {
     position: sticky;
     top: 0;
     z-index: 100;
+
     background: rgba(245, 245, 242, .9);
     backdrop-filter: blur(14px);
+
     border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
 .nav-inner {
     max-width: var(--max);
     margin: auto;
+
     height: 76px;
     padding: 0 32px;
 
@@ -85,14 +82,14 @@ a {
 
 .nav-inner nav {
     display: flex;
-    gap: 34px;
+    gap: 30px;
 }
 
 .nav-inner nav a {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: .08em;
+    letter-spacing: .07em;
     color: #555550;
     transition: .25s;
 }
@@ -102,10 +99,9 @@ a {
 }
 
 .nav-contact {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: .08em;
 }
 
 
@@ -114,11 +110,13 @@ a {
 .hero {
     max-width: var(--max);
     margin: auto;
+
     padding: 100px 32px 120px;
 
     display: grid;
     grid-template-columns: 1.15fr .85fr;
     gap: 90px;
+
     align-items: center;
 }
 
@@ -130,12 +128,14 @@ a {
     font-family: "DM Mono", monospace;
     font-size: 10px;
     letter-spacing: .12em;
+
     margin-bottom: 28px;
 }
 
 .eyebrow span {
     width: 8px;
     height: 8px;
+
     background: var(--lime);
     border-radius: 50%;
 }
@@ -145,18 +145,21 @@ a {
 
     font-size: clamp(60px, 7vw, 105px);
     line-height: .91;
-    letter-spacing: -0.075em;
+
+    letter-spacing: -.075em;
     font-weight: 800;
 }
 
 .hero h1 em {
     display: block;
+
     color: #999993;
     font-style: normal;
 }
 
 .hero-description {
     max-width: 520px;
+
     margin-top: 35px;
 
     font-size: 16px;
@@ -167,17 +170,20 @@ a {
 .hero-actions {
     display: flex;
     gap: 12px;
+
     margin-top: 38px;
 }
 
 .button {
     padding: 15px 22px;
-    font-size: 12px;
+
+    font-size: 11px;
     font-weight: 800;
+
     text-transform: uppercase;
     letter-spacing: .06em;
 
-    transition: transform .25s, box-shadow .25s;
+    transition: .25s;
 }
 
 .button:hover {
@@ -194,13 +200,14 @@ a {
 }
 
 .button-light {
-    border: 1px solid #d4d4cd;
     background: white;
+    border: 1px solid #d4d4cd;
 }
 
 .hero-meta {
     display: flex;
     gap: 40px;
+
     margin-top: 70px;
 }
 
@@ -216,10 +223,11 @@ a {
 
 .hero-meta span {
     font-family: "DM Mono", monospace;
+
     color: var(--gray);
+
     font-size: 9px;
     text-transform: uppercase;
-    letter-spacing: .06em;
 }
 
 
@@ -232,24 +240,29 @@ a {
 .image-frame {
     position: relative;
     overflow: hidden;
+
     background: #ddd;
 }
 
 .image-frame img {
     height: 650px;
+
     object-fit: cover;
     object-position: center;
 }
 
 .image-frame::after {
     content: "";
+
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        transparent 65%,
-        rgba(0,0,0,.45)
-    );
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 65%,
+            rgba(0,0,0,.45)
+        );
 }
 
 .image-label {
@@ -257,8 +270,10 @@ a {
     z-index: 2;
 
     font-family: "DM Mono", monospace;
+
     font-size: 9px;
     letter-spacing: .1em;
+
     color: white;
 }
 
@@ -282,10 +297,12 @@ a {
 
 .hero-note {
     position: absolute;
+
     left: -50px;
     bottom: -30px;
 
     width: 210px;
+
     padding: 18px;
 
     background: var(--lime);
@@ -296,17 +313,19 @@ a {
 }
 
 .hero-note span {
-    font-size: 20px;
     display: block;
+
+    font-size: 20px;
     margin-bottom: 5px;
 }
 
 
-/* ================= SECTIONS ================= */
+/* ================= GENERAL SECTIONS ================= */
 
 .section {
     max-width: var(--max);
     margin: auto;
+
     padding: 130px 32px;
 }
 
@@ -314,20 +333,25 @@ a {
     display: grid;
     grid-template-columns: 100px 1fr;
     gap: 30px;
+
     margin-bottom: 90px;
 }
 
 .section-number {
     font-family: "DM Mono", monospace;
+
     font-size: 11px;
     color: #999993;
 }
 
 .section-kicker {
     font-family: "DM Mono", monospace;
+
     font-size: 10px;
     letter-spacing: .13em;
+
     color: #777772;
+
     margin-bottom: 20px;
 }
 
@@ -336,6 +360,7 @@ a {
 .robotics-intro h2,
 .team-header h2 {
     font-size: clamp(46px, 6vw, 76px);
+
     line-height: .95;
     letter-spacing: -.065em;
 }
@@ -353,6 +378,7 @@ a {
 .about-content {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
+
     gap: 100px;
 }
 
@@ -367,8 +393,10 @@ a {
 
 .about-text .large-text {
     color: var(--black);
+
     font-size: 24px;
     line-height: 1.5;
+
     font-weight: 600;
 }
 
@@ -378,15 +406,18 @@ a {
 
 .fact {
     padding: 25px 0;
+
     border-bottom: 1px solid var(--light-gray);
 
     display: grid;
     grid-template-columns: 40px 1fr;
+
     column-gap: 15px;
 }
 
 .fact span {
     font-family: "DM Mono", monospace;
+
     font-size: 10px;
     color: #999;
 }
@@ -397,15 +428,17 @@ a {
 
 .fact p {
     grid-column: 2;
+
     color: var(--gray);
     font-size: 12px;
 }
 
 
-/* ================= DARK SKILLS ================= */
+/* ================= SKILLS ================= */
 
 .dark-section {
     padding: 130px max(32px, calc((100% - var(--max)) / 2));
+
     background: var(--soft-black);
     color: white;
 }
@@ -422,18 +455,20 @@ a {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     border-top: 1px solid #333;
     border-left: 1px solid #333;
 }
 
 .skill-card {
-    position: relative;
     padding: 45px;
+
     min-height: 310px;
+
     border-right: 1px solid #333;
     border-bottom: 1px solid #333;
 
-    transition: background .3s;
+    transition: .3s;
 }
 
 .skill-card:hover {
@@ -442,19 +477,23 @@ a {
 
 .skill-index {
     font-family: "DM Mono", monospace;
+
     font-size: 10px;
     color: #777;
 }
 
 .skill-card h3 {
     margin-top: 60px;
+
     font-size: 27px;
     letter-spacing: -.04em;
 }
 
 .skill-card p {
     max-width: 400px;
+
     margin-top: 15px;
+
     color: #999;
     font-size: 13px;
 }
@@ -464,21 +503,24 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
+
     margin-top: 25px;
 }
 
 .tags span,
 .mini-tags span {
     padding: 6px 9px;
+
     border: 1px solid #3a3a3a;
 
     font-family: "DM Mono", monospace;
+
     font-size: 9px;
     color: #aaa;
 }
 
 
-/* ================= TIMELINE ================= */
+/* ================= EXPERIENCE ================= */
 
 .timeline {
     border-top: 1px solid var(--light-gray);
@@ -487,22 +529,27 @@ a {
 .timeline-item {
     display: grid;
     grid-template-columns: 220px 1fr;
+
     gap: 60px;
 
     padding: 55px 0;
+
     border-bottom: 1px solid var(--light-gray);
 }
 
 .timeline-date {
     font-family: "DM Mono", monospace;
+
     font-size: 11px;
     color: #888;
 }
 
 .timeline-title {
     display: flex;
+
     justify-content: space-between;
     align-items: baseline;
+
     gap: 20px;
 }
 
@@ -513,13 +560,16 @@ a {
 
 .timeline-title span {
     font-family: "DM Mono", monospace;
+
     font-size: 10px;
     color: #888;
 }
 
 .timeline-content > p {
     max-width: 700px;
+
     margin-top: 15px;
+
     color: var(--gray);
     font-size: 14px;
 }
@@ -535,13 +585,17 @@ a {
 .projects-section {
     max-width: var(--max);
     margin: auto;
+
     padding: 130px 32px;
 }
 
 .projects-header {
     display: grid;
+
     grid-template-columns: 1fr 1.5fr 1fr;
+
     gap: 50px;
+
     align-items: end;
 
     margin-bottom: 80px;
@@ -549,14 +603,17 @@ a {
 
 .projects-header > p {
     color: var(--gray);
+
     font-size: 13px;
+
     max-width: 300px;
-    padding-bottom: 5px;
 }
 
 .project-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 70px 28px;
 }
 
@@ -564,40 +621,65 @@ a {
     cursor: pointer;
 }
 
-.project-image {
-    position: relative;
-    overflow: hidden;
-    background: #ddd;
-}
-
-.project-image img {
-    height: 430px;
-    object-fit: cover;
-    transition: transform .7s cubic-bezier(.2,.7,.2,1);
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.05);
-}
-
-.project-large {
-    grid-column: span 2;
-}
-
-.project-large .project-image img {
-    height: 650px;
-}
-
+.project-large,
 .project-wide {
     grid-column: span 2;
 }
 
-.project-wide .project-image img {
+
+/* ================= PROJECT IMAGE PAIRS ================= */
+
+.project-images {
+    display: grid;
+
+    grid-template-columns: 1.35fr .65fr;
+
+    gap: 10px;
+}
+
+.project-image {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ddd;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .7s cubic-bezier(.2,.7,.2,1);
+}
+
+.main-image {
+    height: 430px;
+}
+
+.second-image {
+    height: 430px;
+}
+
+.project-large .main-image,
+.project-large .second-image {
+    height: 650px;
+}
+
+.project-wide .main-image,
+.project-wide .second-image {
     height: 580px;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.045);
 }
 
 .project-number {
     position: absolute;
+
     top: 20px;
     right: 20px;
 
@@ -610,11 +692,35 @@ a {
     background: var(--lime);
 
     font-family: "DM Mono", monospace;
+
     font-size: 10px;
+
+    z-index: 2;
 }
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items: center;
+
+    background: #e7e7e1;
+
+    color: #999;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+    letter-spacing: .08em;
+}
+
+
+/* ================= PROJECT INFO ================= */
 
 .project-info {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
@@ -623,13 +729,16 @@ a {
 
 .project-info p {
     font-family: "DM Mono", monospace;
+
     color: #999;
+
     font-size: 9px;
     letter-spacing: .08em;
 }
 
 .project-info h3 {
     margin-top: 6px;
+
     font-size: 22px;
     letter-spacing: -.04em;
 }
@@ -656,13 +765,17 @@ a {
 
 .robotics-section {
     padding: 140px max(32px, calc((100% - var(--max)) / 2));
+
     background: var(--lime);
 }
 
 .robotics-intro {
     display: grid;
+
     grid-template-columns: 1fr 1.5fr 1fr;
+
     gap: 50px;
+
     align-items: end;
 }
 
@@ -675,8 +788,11 @@ a {
     margin-top: 80px;
 
     display: grid;
+
     grid-template-columns: 1.5fr .7fr;
+
     gap: 25px;
+
     align-items: end;
 }
 
@@ -686,23 +802,27 @@ a {
 
 .robot-image img {
     height: 450px;
-    object-fit: cover;
-    transition: transform .6s ease;
-}
 
-.robot-image:hover img {
-    transform: scale(1.04);
+    object-fit: cover;
+
+    transition: transform .6s ease;
 }
 
 .robot-image.main img {
     height: 600px;
 }
 
+.robot-image:hover img {
+    transform: scale(1.04);
+}
+
 .achievements {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
 
     margin-top: 70px;
+
     border-top: 1px solid rgba(0,0,0,.2);
 }
 
@@ -712,17 +832,21 @@ a {
 
 .achievement + .achievement {
     padding-left: 40px;
+
     border-left: 1px solid rgba(0,0,0,.2);
 }
 
 .achievement span {
     font-family: "DM Mono", monospace;
+
     font-size: 10px;
 }
 
 .achievement strong {
     display: block;
+
     margin-top: 8px;
+
     font-size: 22px;
 }
 
@@ -736,35 +860,45 @@ a {
 .team-section {
     max-width: var(--max);
     margin: auto;
+
     padding: 130px 32px;
 }
 
 .team-header {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 80px;
+
     align-items: end;
 }
 
 .team-header > p {
     max-width: 450px;
+
     color: var(--gray);
 }
 
 .team-gallery {
     display: grid;
+
     grid-template-columns: 1.3fr .7fr;
+
     gap: 25px;
+
     margin-top: 70px;
 }
 
 .team-gallery img {
     height: 500px;
+
     object-fit: cover;
 }
 
 .team-gallery img:last-child {
     height: 400px;
+
     margin-top: 100px;
 }
 
@@ -775,7 +909,9 @@ a {
     padding: 120px max(32px, calc((100% - var(--max)) / 2));
 
     display: grid;
+
     grid-template-columns: 1fr 2fr;
+
     gap: 80px;
 
     border-top: 1px solid var(--light-gray);
@@ -783,20 +919,160 @@ a {
 
 .education-main > span {
     font-family: "DM Mono", monospace;
+
     font-size: 10px;
     color: #888;
 }
 
 .education-main h2 {
     margin-top: 20px;
+
     font-size: clamp(42px, 5vw, 70px);
+
     line-height: .95;
     letter-spacing: -.06em;
 }
 
 .education-main p {
     margin-top: 25px;
+
     color: var(--gray);
+}
+
+
+/* ================= CERTIFICATES ================= */
+
+.certificates-section {
+    max-width: var(--max);
+    margin: auto;
+
+    padding: 130px 32px;
+}
+
+.certificates-header {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+
+    gap: 60px;
+
+    align-items: end;
+
+    margin-bottom: 70px;
+}
+
+.certificates-header h2 {
+    max-width: 750px;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: .94;
+    letter-spacing: -.065em;
+}
+
+.certificates-header h2 span {
+    color: #999993;
+}
+
+.certificates-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.certificate-card {
+    cursor: pointer;
+}
+
+.certificate-image {
+    position: relative;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--light-gray);
+
+    aspect-ratio: 4 / 3;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .6s cubic-bezier(.2,.7,.2,1);
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.035);
+}
+
+.certificate-number {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--lime);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+}
+
+.certificate-info {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 18px;
+}
+
+.certificate-info p {
+    font-family: "DM Mono", monospace;
+
+    color: #999;
+
+    font-size: 8px;
+
+    letter-spacing: .08em;
+}
+
+.certificate-info h3 {
+    margin-top: 6px;
+
+    font-size: 17px;
+
+    letter-spacing: -.03em;
+}
+
+.certificate-arrow {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #ddd;
+
+    transition: .3s;
+}
+
+.certificate-card:hover .certificate-arrow {
+    background: var(--black);
+    color: white;
 }
 
 
@@ -804,7 +1080,9 @@ a {
 
 .contact-section {
     padding: 150px max(32px, calc((100% - var(--max)) / 2));
+
     background: var(--black);
+
     color: white;
 }
 
@@ -825,6 +1103,7 @@ a {
     margin-top: 90px;
 
     font-size: clamp(65px, 9vw, 125px);
+
     line-height: .87;
     letter-spacing: -.08em;
 }
@@ -835,15 +1114,19 @@ a {
 
 .email-link {
     display: inline-flex;
+
     align-items: center;
+
     gap: 35px;
 
     margin-top: 70px;
+
     padding-bottom: 15px;
 
     border-bottom: 1px solid #444;
 
     font-size: clamp(20px, 3vw, 35px);
+
     font-weight: 600;
 }
 
@@ -853,15 +1136,19 @@ a {
 
 .contact-bottom {
     margin-top: 120px;
+
     padding-top: 25px;
 
     border-top: 1px solid #333;
 
     display: flex;
+
     justify-content: space-between;
 
     font-family: "DM Mono", monospace;
+
     font-size: 10px;
+
     color: #888;
 }
 
@@ -874,43 +1161,44 @@ a {
 
 footer {
     background: var(--black);
+
     border-top: 1px solid #292929;
 
     padding: 25px 32px;
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
     color: #777;
 
     font-family: "DM Mono", monospace;
+
     font-size: 9px;
 }
 
 footer span {
     color: white;
+
     font-size: 17px;
+
     font-weight: 800;
 }
 
 
 /* ================= RESPONSIVE ================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .nav-inner nav {
-        display: none;
+        gap: 15px;
     }
 
     .hero {
         grid-template-columns: 1fr;
-        gap: 70px;
-        padding-top: 70px;
-    }
 
-    .hero h1 {
-        font-size: clamp(58px, 14vw, 90px);
+        gap: 70px;
     }
 
     .hero-right {
@@ -919,11 +1207,13 @@ footer span {
 
     .about-content {
         grid-template-columns: 1fr;
+
         gap: 60px;
     }
 
     .projects-header {
         grid-template-columns: 1fr;
+
         gap: 25px;
     }
 
@@ -937,15 +1227,31 @@ footer span {
 
     .education-section {
         grid-template-columns: 1fr;
+
         gap: 30px;
     }
+
+    .certificates-header {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     .nav-inner {
         padding: 0 20px;
+    }
+
+    .nav-inner nav {
+        display: none;
     }
 
     .nav-contact {
@@ -955,7 +1261,8 @@ footer span {
     .hero,
     .section,
     .projects-section,
-    .team-section {
+    .team-section,
+    .certificates-section {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -970,7 +1277,7 @@ footer span {
 
     .hero {
         padding-top: 55px;
-        padding-bottom: 80px;
+        padding-bottom: 90px;
     }
 
     .hero h1 {
@@ -991,12 +1298,10 @@ footer span {
 
     .hero-meta {
         gap: 20px;
-        flex-wrap: wrap;
-        margin-top: 50px;
-    }
 
-    .hero-meta div {
-        min-width: 90px;
+        flex-wrap: wrap;
+
+        margin-top: 50px;
     }
 
     .image-frame img {
@@ -1015,7 +1320,9 @@ footer span {
 
     .section-heading {
         grid-template-columns: 45px 1fr;
+
         gap: 15px;
+
         margin-bottom: 55px;
     }
 
@@ -1033,6 +1340,7 @@ footer span {
 
     .skill-card {
         min-height: auto;
+
         padding: 30px;
     }
 
@@ -1042,7 +1350,9 @@ footer span {
 
     .timeline-item {
         grid-template-columns: 1fr;
+
         gap: 15px;
+
         padding: 40px 0;
     }
 
@@ -1052,11 +1362,16 @@ footer span {
 
     .timeline-title span {
         display: block;
+
         margin-top: 8px;
     }
 
+
+    /* PROJECTS */
+
     .project-grid {
         grid-template-columns: 1fr;
+
         gap: 50px;
     }
 
@@ -1065,14 +1380,27 @@ footer span {
         grid-column: auto;
     }
 
-    .project-image img,
-    .project-large .project-image img,
-    .project-wide .project-image img {
-        height: 380px;
+    .project-images {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 7px;
     }
+
+    .main-image,
+    .second-image,
+    .project-large .main-image,
+    .project-large .second-image,
+    .project-wide .main-image,
+    .project-wide .second-image {
+        height: 300px;
+    }
+
+
+    /* ROBOTICS */
 
     .robotics-gallery {
         grid-template-columns: 1fr;
+
         margin-top: 50px;
     }
 
@@ -1087,9 +1415,14 @@ footer span {
 
     .achievement + .achievement {
         padding-left: 0;
+
         border-left: 0;
+
         border-top: 1px solid rgba(0,0,0,.2);
     }
+
+
+    /* TEAM */
 
     .team-gallery {
         grid-template-columns: 1fr;
@@ -1098,12 +1431,37 @@ footer span {
     .team-gallery img,
     .team-gallery img:last-child {
         height: 380px;
+
         margin-top: 0;
     }
+
+
+    /* EDUCATION */
 
     .education-main h2 {
         font-size: 48px;
     }
+
+
+    /* CERTIFICATES */
+
+    .certificates-section {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .certificates-header h2 {
+        font-size: 48px;
+    }
+
+
+    /* CONTACT */
 
     .contact-section {
         padding-top: 100px;
@@ -1112,25 +1470,37 @@ footer span {
 
     .contact-section h2 {
         margin-top: 60px;
+
         font-size: 64px;
     }
 
     .email-link {
         font-size: 18px;
+
         gap: 15px;
+
         word-break: break-word;
     }
 
     .contact-bottom {
         margin-top: 80px;
+
         flex-direction: column;
+
         gap: 20px;
     }
 
+
+    /* FOOTER */
+
     footer {
         padding: 20px;
+
         flex-direction: column;
+
         gap: 10px;
+
         text-align: center;
     }
+
 }
