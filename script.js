@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* ================= REVEAL ANIMATION ================= */
+    /* ================= SCROLL REVEAL ================= */
 
     const revealElements = document.querySelectorAll(
         ".section-intro, " +
